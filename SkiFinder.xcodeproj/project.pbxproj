@@ -63,6 +63,16 @@
 		36CF099027976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF098F27976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift */; };
 		36DFE1EE27925B0D00151478 /* FirebaseNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */; };
 		36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */; };
+		36FC23B3279F941100CC7255 /* continueWithPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B2279F941100CC7255 /* continueWithPhoneNumberViewController.swift */; };
+		36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */; };
+		36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */; };
+		36FC23BB279FC24800CC7255 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23BA279FC24800CC7255 /* VerifyPhoneNumberViewController.swift */; };
+		36FC23BD279FD8E500CC7255 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23BC279FD8E500CC7255 /* DatabaseManager.swift */; };
+		36FC23BF279FDD5B00CC7255 /* LoginSignUpNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23BE279FDD5B00CC7255 /* LoginSignUpNavViewController.swift */; };
+		36FC23C1279FE6DE00CC7255 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23C0279FE6DD00CC7255 /* AuthManager.swift */; };
+		36FC23CB27A006E500CC7255 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23CA27A006E500CC7255 /* StartScreenViewController.swift */; };
+		36FC23D027A0B0F100CC7255 /* FirstNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23CF27A0B0F100CC7255 /* FirstNameViewController.swift */; };
+		36FC23D227A0B17600CC7255 /* BirthDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23D127A0B17600CC7255 /* BirthDateViewController.swift */; };
 		8B986F069A872C42CE8D834A /* Pods_SkiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D3FC5FBDCAA351393C4B82 /* Pods_SkiFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +109,17 @@
 		36CF098F27976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiScheduleHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkError.swift; sourceTree = "<group>"; };
 		36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		36FC23AD279F841100CC7255 /* SkiFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkiFinder.entitlements; sourceTree = "<group>"; };
+		36FC23B2279F941100CC7255 /* continueWithPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = continueWithPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeCodeTextField.swift; sourceTree = "<group>"; };
+		36FC23BA279FC24800CC7255 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		36FC23BC279FD8E500CC7255 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		36FC23BE279FDD5B00CC7255 /* LoginSignUpNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpNavViewController.swift; sourceTree = "<group>"; };
+		36FC23C0279FE6DD00CC7255 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		36FC23CA27A006E500CC7255 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		36FC23CF27A0B0F100CC7255 /* FirstNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNameViewController.swift; sourceTree = "<group>"; };
+		36FC23D127A0B17600CC7255 /* BirthDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDateViewController.swift; sourceTree = "<group>"; };
 		67298E30740B3F321121648C /* Pods-SkiFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiFinder.debug.xcconfig"; path = "Target Support Files/Pods-SkiFinder/Pods-SkiFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		9D0BA9CF3046DABDC07321B3 /* Pods-SkiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiFinder.release.xcconfig"; path = "Target Support Files/Pods-SkiFinder/Pods-SkiFinder.release.xcconfig"; sourceTree = "<group>"; };
 		E3D3FC5FBDCAA351393C4B82 /* Pods_SkiFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +184,7 @@
 		360DBB3C278A3E5600F41CBF /* SkiFinder */ = {
 			isa = PBXGroup;
 			children = (
+				36FC23AD279F841100CC7255 /* SkiFinder.entitlements */,
 				365EEB03278BD769008E4B8B /* Models */,
 				365EEB02278BD75A008E4B8B /* Views */,
 				365EEB04278BD76D008E4B8B /* Controllers */,
@@ -214,6 +236,8 @@
 		365EEB04278BD76D008E4B8B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36FC23C0279FE6DD00CC7255 /* AuthManager.swift */,
+				36FC23BC279FD8E500CC7255 /* DatabaseManager.swift */,
 				365EEB06278BD784008E4B8B /* ModelControllers */,
 				365EEB05278BD77C008E4B8B /* ViewControllers */,
 			);
@@ -223,16 +247,10 @@
 		365EEB05278BD77C008E4B8B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */,
-				365EEB0D278BEEF7008E4B8B /* SignUpViewController.swift */,
-				367D7426278D5BEC008D7007 /* MainNavViewController.swift */,
-				3628A98D278E96A200B4D813 /* SignInViewController.swift */,
-				3628A993278EA0CB00B4D813 /* MainTabBarViewController.swift */,
-				3628A99B278EBAAC00B4D813 /* ProfileCollectionViewController.swift */,
-				3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */,
-				36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */,
-				369104A127976FAE00550EBF /* SkiUserTableViewController.swift */,
-				3616D607279A98C500D986ED /* EditSkiDatesViewController.swift */,
+				36FC23B1279F937700CC7255 /* Main Navigation */,
+				36FC23B0279F936B00CC7255 /* Feed */,
+				36FC23AF279F935500CC7255 /* Profile */,
+				36FC23AE279F933B00CC7255 /* OnBoarding */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -253,6 +271,7 @@
 				367D742C278D67C1008D7007 /* Constants.swift */,
 				3628A9AB278FCF0A00B4D813 /* DateExtension.swift */,
 				36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */,
+				36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */,
 			);
 			path = "Helpers + Extensions";
 			sourceTree = "<group>";
@@ -276,6 +295,67 @@
 				3616D604279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift */,
 			);
 			path = SkiUserProfiles;
+			sourceTree = "<group>";
+		};
+		36FC23AE279F933B00CC7255 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				36FC23CF27A0B0F100CC7255 /* FirstNameViewController.swift */,
+				36FC23D127A0B17600CC7255 /* BirthDateViewController.swift */,
+				36FC23BE279FDD5B00CC7255 /* LoginSignUpNavViewController.swift */,
+				36FC23CA27A006E500CC7255 /* StartScreenViewController.swift */,
+				36FC23CC27A0B03900CC7255 /* Information SetUp */,
+				36FC23CD27A0B08600CC7255 /* Old Onboarding */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		36FC23AF279F935500CC7255 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */,
+				3616D607279A98C500D986ED /* EditSkiDatesViewController.swift */,
+				3628A99B278EBAAC00B4D813 /* ProfileCollectionViewController.swift */,
+				36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		36FC23B0279F936B00CC7255 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */,
+				369104A127976FAE00550EBF /* SkiUserTableViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		36FC23B1279F937700CC7255 /* Main Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				367D7426278D5BEC008D7007 /* MainNavViewController.swift */,
+				3628A993278EA0CB00B4D813 /* MainTabBarViewController.swift */,
+			);
+			path = "Main Navigation";
+			sourceTree = "<group>";
+		};
+		36FC23CC27A0B03900CC7255 /* Information SetUp */ = {
+			isa = PBXGroup;
+			children = (
+				36FC23B2279F941100CC7255 /* continueWithPhoneNumberViewController.swift */,
+				36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */,
+				36FC23BA279FC24800CC7255 /* VerifyPhoneNumberViewController.swift */,
+			);
+			path = "Information SetUp";
+			sourceTree = "<group>";
+		};
+		36FC23CD27A0B08600CC7255 /* Old Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				365EEB0D278BEEF7008E4B8B /* SignUpViewController.swift */,
+				3628A98D278E96A200B4D813 /* SignInViewController.swift */,
+			);
+			path = "Old Onboarding";
 			sourceTree = "<group>";
 		};
 		3B27AF01B9DC1882A905A844 /* Pods */ = {
@@ -306,7 +386,7 @@
 				360DBB36278A3E5600F41CBF /* Sources */,
 				360DBB37278A3E5600F41CBF /* Frameworks */,
 				360DBB38278A3E5600F41CBF /* Resources */,
-				28AD22D91D5CEBDE647312A8 /* [CP] Embed Pods Frameworks */,
+				761A997E386AFBCD0089EDD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,7 +498,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		28AD22D91D5CEBDE647312A8 /* [CP] Embed Pods Frameworks */ = {
+		761A997E386AFBCD0089EDD1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -443,7 +523,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				36DFE1EE27925B0D00151478 /* FirebaseNetworkError.swift in Sources */,
+				36FC23CB27A006E500CC7255 /* StartScreenViewController.swift in Sources */,
 				3628A98E278E96A300B4D813 /* SignInViewController.swift in Sources */,
+				36FC23BB279FC24800CC7255 /* VerifyPhoneNumberViewController.swift in Sources */,
 				3616D608279A98C500D986ED /* EditSkiDatesViewController.swift in Sources */,
 				365EEB0A278BDA81008E4B8B /* User.swift in Sources */,
 				367D742D278D67C1008D7007 /* Constants.swift in Sources */,
@@ -452,19 +534,27 @@
 				36CF098B27976A71006B0435 /* SkiUserPhotoTableViewCell.swift in Sources */,
 				365EEB13278C0A3D008E4B8B /* AuthErrorCodeExtension.swift in Sources */,
 				369104A227976FAE00550EBF /* SkiUserTableViewController.swift in Sources */,
+				36FC23D027A0B0F100CC7255 /* FirstNameViewController.swift in Sources */,
 				36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */,
 				3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */,
 				360DBB3E278A3E5600F41CBF /* AppDelegate.swift in Sources */,
 				3616D605279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift in Sources */,
 				365EEB0C278BE15E008E4B8B /* UserController.swift in Sources */,
+				36FC23D227A0B17600CC7255 /* BirthDateViewController.swift in Sources */,
+				36FC23BF279FDD5B00CC7255 /* LoginSignUpNavViewController.swift in Sources */,
 				365EEB17278C1483008E4B8B /* UserTableViewCell.swift in Sources */,
+				36FC23B3279F941100CC7255 /* continueWithPhoneNumberViewController.swift in Sources */,
+				36FC23C1279FE6DE00CC7255 /* AuthManager.swift in Sources */,
+				36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */,
 				365EEB0E278BEEF7008E4B8B /* SignUpViewController.swift in Sources */,
 				3628A9AC278FCF0A00B4D813 /* DateExtension.swift in Sources */,
 				363C47032798B21E005DB518 /* SkiUserCalendarTableViewCell.swift in Sources */,
 				365EEB08278BDA1F008E4B8B /* FeedTableViewController.swift in Sources */,
 				3628A994278EA0CB00B4D813 /* MainTabBarViewController.swift in Sources */,
 				3675353727969992004129CB /* AllUsersController.swift in Sources */,
+				36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */,
 				367D7427278D5BEC008D7007 /* MainNavViewController.swift in Sources */,
+				36FC23BD279FD8E500CC7255 /* DatabaseManager.swift in Sources */,
 				3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */,
 				3628A99C278EBAAC00B4D813 /* ProfileCollectionViewController.swift in Sources */,
 				360DBB40278A3E5600F41CBF /* SceneDelegate.swift in Sources */,
@@ -615,11 +705,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkiFinder/SkiFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4A4K7JEVG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SkiFinder/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SkiBuddyFinder;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -646,11 +738,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkiFinder/SkiFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4A4K7JEVG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SkiFinder/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SkiBuddyFinder;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

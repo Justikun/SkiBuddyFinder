@@ -25,6 +25,7 @@ class User: Identifiable, Codable {
     var skiTypes: SkiTypes
     var profilePhotoURL: String?
     var photoURLS: [String]
+    var onboardingComplete: Bool
     
     enum CodingKeys: String, CodingKey {
         case uid = "uid"
@@ -40,37 +41,7 @@ class User: Identifiable, Codable {
         case skiTypes = "ski_types"
         case profilePhotoURL = "profile_photo_url"
         case photoURLS = "photo_urls"
-        
-//        var localizedText: String {
-//            switch self {
-//            case .uid:
-//                return Constants.Firebase.User.uidKey
-//            case .firstName:
-//                return Constants.Firebase.User.firstNameKey
-//            case .birthDate:
-//                return Constants.Firebase.User.dateOfBirthKey
-//            case .skiProficiency:
-//                return Constants.Firebase.User.skiProficiencyKey
-//            case .skiPassLocation:
-//                return Constants.Firebase.User.skiPassLocationsKey
-//            case .currentLocation:
-//                return Constants.Firebase.User.currentLocationKey
-//            case .bio:
-//                return Constants.Firebase.User.bioKey
-//            case .skiStyleTags:
-//                return Constants.Firebase.User.skiStyleTagsKey
-//            case .skiDates:
-//                return Constants.Firebase.User.skiDatesKey
-//            case .skiInviteDates:
-//                return Constants.Firebase.User.skiInviteDatesKey
-//            case .skiTypes:
-//                return Constants.Firebase.User.skiTypesKey
-//            case .profilePhotoURL:
-//                return Constants.Firebase.User.profilePhotoURLKey
-//            case .photoURLS:
-//                return Constants.Firebase.User.photoURLSKey
-//            }
-//        }
+        case onboardingComplete = "onboarding_complete"
     }
     
     
@@ -86,7 +57,8 @@ class User: Identifiable, Codable {
          skiInviteDates: [SkiInviteDates] = [],
          skiTypes: SkiTypes = SkiTypes(ski: false, snowboard: false),
          profilePhotoURL: String = "",
-         photoURLS: [String] = []
+         photoURLS: [String] = [],
+         onboardingComplete: Bool = false
     ) {
         self.uid = uid
         self.firstName = firstName
@@ -101,6 +73,7 @@ class User: Identifiable, Codable {
         self.skiTypes = skiTypes
         self.profilePhotoURL = profilePhotoURL
         self.photoURLS = photoURLS
+        self.onboardingComplete = onboardingComplete
     }
 }
 

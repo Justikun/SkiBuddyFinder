@@ -61,9 +61,6 @@ class FeedTableViewController: UITableViewController {
     }
     
     func getCurrentUser() {
-        if let user = Auth.auth().currentUser {
-            print("Email: \(user.email!)")
-        }
     }
 
     // MARK: - Table view data source

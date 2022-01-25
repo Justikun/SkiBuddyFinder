@@ -25,13 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("User Fetched")
         }
         
+        
             // if user has logged in before
         if Auth.auth().currentUser != nil {
             // User is logged in
             let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarViewController")
             window?.rootViewController = mainTabBarController
         } else {
-            // if user isn't logged in
+//             if user isn't logged in
+//            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "PhoneLoginNVC")
+            
             let loginNavController = storyboard.instantiateViewController(identifier: "OnBoardingNavigationVC")
             window?.rootViewController = loginNavController
         }
