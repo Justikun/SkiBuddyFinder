@@ -39,7 +39,7 @@ class SkiProficiencyViewController: UIViewController {
               let skiProficiency = skiProficiencyTextField.text else { return }
         user.skiProficiency = skiProficiency
         user.skiTypes.ski = skiSwitch.isOn
-        user.skiTypes.snowboard = skiSwitch.isOn
+        user.skiTypes.snowboard = snowboardSwitch.isOn
         
         performSegue(withIdentifier: "toAddPhotoVC", sender: user)
     }

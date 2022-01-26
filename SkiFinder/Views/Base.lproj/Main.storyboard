@@ -387,7 +387,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-zD-cIW">
                                             <rect key="frame" x="67" y="12" width="280.5" height="20"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
                                                     <rect key="frame" x="0.0" y="0.0" width="111.5" height="20"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-Md-V71">
@@ -409,7 +409,7 @@
                                                                 <constraint firstItem="1vI-c7-RaJ" firstAttribute="centerX" secondItem="PEQ-Md-V71" secondAttribute="centerX" id="zlM-dm-Nwq"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
                                                             <rect key="frame" x="48" y="0.0" width="63.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -417,7 +417,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
                                                     <rect key="frame" x="141.5" y="0.0" width="139" height="20"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3J-lD-tlE">
@@ -439,7 +439,7 @@
                                                                 <constraint firstAttribute="width" secondItem="v3J-lD-tlE" secondAttribute="height" multiplier="1:1" id="Z3O-aq-ZuD"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
                                                             <rect key="frame" x="48" y="0.0" width="91" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -2031,7 +2031,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqU-u9-NnD">
-                                <rect key="frame" x="207" y="571" width="165.5" height="50"/>
+                                <rect key="frame" x="207" y="641" width="165.5" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pDG-pJ-spt"/>
@@ -2051,7 +2051,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                             <constraint firstItem="piO-H3-leR" firstAttribute="width" secondItem="gfF-C7-8z6" secondAttribute="width" multiplier="0.8" id="2SG-Mi-rJu"/>
                             <constraint firstItem="8A5-7g-4ZV" firstAttribute="top" secondItem="2Ox-yV-5WR" secondAttribute="bottom" constant="30" id="8Do-ZB-6ie"/>
                             <constraint firstItem="wqU-u9-NnD" firstAttribute="trailing" secondItem="piO-H3-leR" secondAttribute="trailing" id="8Gy-Jm-w96"/>
-                            <constraint firstItem="wqU-u9-NnD" firstAttribute="top" secondItem="Gp5-8U-cei" secondAttribute="bottom" constant="30" id="919-fd-bzf"/>
+                            <constraint firstItem="wqU-u9-NnD" firstAttribute="top" secondItem="Gp5-8U-cei" secondAttribute="bottom" constant="100" id="8pP-ba-bIQ"/>
                             <constraint firstItem="2Ox-yV-5WR" firstAttribute="trailing" secondItem="piO-H3-leR" secondAttribute="trailing" id="Dem-B0-AtV"/>
                             <constraint firstItem="Gp5-8U-cei" firstAttribute="leading" secondItem="piO-H3-leR" secondAttribute="leading" id="ETR-VL-nDP"/>
                             <constraint firstItem="WND-9c-qNB" firstAttribute="width" secondItem="gfF-C7-8z6" secondAttribute="width" multiplier="0.5" id="LCR-v4-kgi"/>

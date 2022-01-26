@@ -17,30 +17,51 @@ class AddProfilePicViewController: UIViewController {
     // MARK: - Properties
     var user: User?
     private var didChangePhoto = false
-    private var profilePhotoURL: String?
-    
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         UIView.setAnimationsEnabled(true)
+        continueButton.isEnabled = false
         setUpStyles()
     }
     
     // MARK: - Actions
     @IBAction func changeProfilePhotoButtonPressed(_ sender: UIButton) {
+        // TODO: - add Image cropper SDK to this.
         photoPicker()
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
+        guard let user = user,
+              let profileImage = profileImage.image else { return }
+        savePhoto(photo: profileImage) { url in
+            if let url = url {
+                user.profilePhotoURL = url
+                
+                UserController.shared.createUserInFirebase(user: user) { error in
+                    if let error = error {
+                        print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
+                    }
+                }
+            }
+        }
         
-        // TODO: - continue to the main app
+        // TODO: - Set  new root view controller
+    
     }
     
     // MARK: - Methods
     private func setUpStyles() {
         continueButton.setPillShape()
         continueButton.setShadow()
+    }
+    
+    private func savePhoto(photo: UIImage, completion: @escaping(String?) -> Void) {
+        UserController.shared.saveProfilePhoto(photo) { url in
+            return completion(url?.absoluteString)
+        }
+        return completion(nil)
     }
 } // End of class
 
@@ -49,13 +70,16 @@ extension AddProfilePicViewController: PHPickerViewControllerDelegate {
         picker.dismiss(animated: true)
         
         results.forEach { result in
-            result.itemProvider.loadObject(ofClass: UIImage.self) { reading, error in
+            result.itemProvider.loadObject(ofClass: UIImage.self) {[weak self] reading, error in
+                guard let self = self else { return }
+                
                 if let error = error {
                     print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
                 }
                 
                 guard let image = reading as? UIImage else { return }
                 DispatchQueue.main.async {
+                    self.continueButton.isEnabled = true
                     self.didChangePhoto = true
                     self.profileImage.image = image
                 }
