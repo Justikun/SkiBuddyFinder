@@ -12,7 +12,7 @@ class AuthManager {
     /// Shared instance
     static let shared = AuthManager()
     
-    private let auth = Auth.auth()
+    let auth = Auth.auth()
     
     /// VerificationID
     private var verificationID: String?

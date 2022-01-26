@@ -15,6 +15,7 @@ class VerifyPhoneNumberViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
+    var window: UIWindow?
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -42,7 +43,12 @@ class VerifyPhoneNumberViewController: UIViewController {
                 return
             }
             
-            // Move to text step of onboarding
+            // Begin onboarding
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "ProfileSetUpVC")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false, completion: nil)
+            
         }
     }
     

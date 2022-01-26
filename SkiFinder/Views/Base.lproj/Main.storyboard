@@ -387,7 +387,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-zD-cIW">
                                             <rect key="frame" x="67" y="12" width="280.5" height="20"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
                                                     <rect key="frame" x="0.0" y="0.0" width="111.5" height="20"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-Md-V71">
@@ -409,7 +409,7 @@
                                                                 <constraint firstItem="1vI-c7-RaJ" firstAttribute="centerX" secondItem="PEQ-Md-V71" secondAttribute="centerX" id="zlM-dm-Nwq"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
                                                             <rect key="frame" x="48" y="0.0" width="63.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -417,7 +417,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
                                                     <rect key="frame" x="141.5" y="0.0" width="139" height="20"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3J-lD-tlE">
@@ -439,7 +439,7 @@
                                                                 <constraint firstAttribute="width" secondItem="v3J-lD-tlE" secondAttribute="height" multiplier="1:1" id="Z3O-aq-ZuD"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
                                                             <rect key="frame" x="48" y="0.0" width="91" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -518,7 +518,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BCu-2M-a9T" kind="show" id="omj-pe-1oz"/>
+                                                    <segue destination="BCu-2M-a9T" kind="show" id="8wC-DI-yCR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Z1-cv-hX2">
@@ -532,7 +532,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BCu-2M-a9T" kind="show" id="F7B-cS-Oze"/>
+                                                    <segue destination="BCu-2M-a9T" kind="show" id="hHv-UR-tGk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -578,7 +578,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         <!--Continue With Phone Number View Controller-->
         <scene sceneID="wqh-oX-kYb">
             <objects>
-                <viewController storyboardIdentifier="ContinueWithPhoneNumberVC" id="BCu-2M-a9T" customClass="continueWithPhoneNumberViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContinueWithPhoneNumberVC" id="BCu-2M-a9T" customClass="ContinueWithPhoneNumberViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i7g-BN-4iG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -752,7 +752,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VnY-jc-qGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2823" y="966"/>
+            <point key="canvasLocation" x="-2633" y="966"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="61U-24-cNv">
@@ -1117,7 +1117,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HX3-lt-oco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3800.0000000000005" y="557.8125"/>
+            <point key="canvasLocation" x="4710.144927536232" y="557.8125"/>
         </scene>
         <!--Edit Ski Dates View Controller-->
         <scene sceneID="7uU-9P-0iW">
@@ -1243,7 +1243,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ef-55-Mhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4686.9565217391309" y="1273.6607142857142"/>
+            <point key="canvasLocation" x="5597.1014492753629" y="1273.6607142857142"/>
         </scene>
         <!--Edit Profile Table View Controller-->
         <scene sceneID="wDt-og-iNd">
@@ -1546,7 +1546,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymp-LH-yn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4686.9565217391309" y="557.8125"/>
+            <point key="canvasLocation" x="5597.1014492753629" y="557.8125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9V2-wE-wsf">
@@ -1573,24 +1573,24 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiR-HP-day" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889.8550724637685" y="557.8125"/>
+            <point key="canvasLocation" x="3800.0000000000005" y="557.8125"/>
         </scene>
         <!--First Name View Controller-->
         <scene sceneID="gEh-Mr-jq4">
             <objects>
-                <viewController id="PEe-t0-VWO" customClass="FirstNameViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstNameVC" id="PEe-t0-VWO" customClass="FirstNameViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exI-Y2-xrN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's set up your account!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC4-0M-WFj">
-                                <rect key="frame" x="41.5" y="64" width="331" height="76.5"/>
+                                <rect key="frame" x="41.5" y="108" width="331" height="76.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0dy-U0-IfD">
-                                <rect key="frame" x="41.5" y="170.5" width="331" height="79"/>
+                                <rect key="frame" x="41.5" y="214.5" width="331" height="79"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDa-7E-QIq">
                                         <rect key="frame" x="0.0" y="0.0" width="120.5" height="29"/>
@@ -1614,9 +1614,9 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your first name." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l83-nG-cUS">
-                                <rect key="frame" x="41.5" y="269.5" width="331" height="20.5"/>
+                                <rect key="frame" x="41.5" y="313.5" width="331" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC7-R5-J74">
@@ -1630,7 +1630,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="PEe-t0-VWO" eventType="touchUpInside" id="mrs-vU-fdL"/>
+                                    <action selector="continueButtonPressed:" destination="PEe-t0-VWO" eventType="touchUpInside" id="UMi-Hf-G1V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1656,11 +1656,12 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                     <connections>
                         <outlet property="continueButton" destination="jC7-R5-J74" id="bpE-Ek-HNW"/>
                         <outlet property="nameTextField" destination="Ijw-GO-aD3" id="mc8-jh-fl2"/>
+                        <segue destination="TtH-sW-07t" kind="show" identifier="toBirthDateVC" id="kSj-g9-D4S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7e-nA-qFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2032" y="966"/>
+            <point key="canvasLocation" x="-1843" y="966"/>
         </scene>
         <!--Birth Date View Controller-->
         <scene sceneID="tlb-AZ-Gp2">
@@ -1671,13 +1672,13 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's set up your account!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyk-yt-Cy3">
-                                <rect key="frame" x="41.5" y="64" width="331" height="76.5"/>
+                                <rect key="frame" x="41.5" y="108" width="331" height="76.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-CZ-l7g">
-                                <rect key="frame" x="41.5" y="170.5" width="331" height="79"/>
+                                <rect key="frame" x="41.5" y="214.5" width="331" height="79"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed8-PX-jBa">
                                         <rect key="frame" x="0.0" y="0.0" width="112.5" height="29"/>
@@ -1701,9 +1702,9 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your age." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgh-fo-zSV">
-                                <rect key="frame" x="41.5" y="269.5" width="331" height="20.5"/>
+                                <rect key="frame" x="41.5" y="313.5" width="331" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-cA-vnK">
@@ -1717,9 +1718,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="BCu-2M-a9T" eventType="touchUpInside" id="Iha-YF-WjW"/>
-                                    <action selector="continueButtonPressed:" destination="2Fj-G8-DEq" eventType="touchUpInside" id="a1i-hu-LsM"/>
-                                    <action selector="continueButtonPressed:" destination="TtH-sW-07t" eventType="touchUpInside" id="s4v-7R-oSP"/>
+                                    <action selector="continueButtonPressed:" destination="TtH-sW-07t" eventType="touchUpInside" id="st5-ia-nY0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1745,31 +1744,32 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                     <connections>
                         <outlet property="birthDateTextField" destination="hBq-v2-MIK" id="kmb-yy-ogg"/>
                         <outlet property="continueButton" destination="Rad-cA-vnK" id="xEr-Za-4zO"/>
+                        <segue destination="DWj-Zq-vTs" kind="show" identifier="toSkiPassLocationVC" id="MHt-nd-hHd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2F-mc-yk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1271" y="966"/>
+            <point key="canvasLocation" x="-1081" y="966"/>
         </scene>
-        <!--View Controller-->
+        <!--Ski Pass Location View Controller-->
         <scene sceneID="ELY-bB-8PC">
             <objects>
-                <viewController id="DWj-Zq-vTs" sceneMemberID="viewController">
+                <viewController id="DWj-Zq-vTs" customClass="SkiPassLocationViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKX-wY-cLA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's set up your account!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQJ-6P-zWs">
-                                <rect key="frame" x="41.5" y="64" width="331" height="76.5"/>
+                                <rect key="frame" x="41.5" y="108" width="331" height="76.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Ze-gY-UPP">
-                                <rect key="frame" x="41.5" y="170.5" width="331" height="79"/>
+                                <rect key="frame" x="41.5" y="214.5" width="331" height="79"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ski Proficiency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMw-Uh-aSk">
-                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ski Pass Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMw-Uh-aSk">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1789,10 +1789,10 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <constraint firstItem="3Nc-MU-Ksc" firstAttribute="leading" secondItem="2Ze-gY-UPP" secondAttribute="leading" id="YHM-FT-bJX"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your ski proficiency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUf-3c-Jzk">
-                                <rect key="frame" x="41.5" y="269.5" width="331" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your ski pass location." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUf-3c-Jzk">
+                                <rect key="frame" x="41.5" y="313.5" width="331" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dol-SG-ez5">
@@ -1806,8 +1806,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="BCu-2M-a9T" eventType="touchUpInside" id="Wrg-ZC-XA8"/>
-                                    <action selector="continueButtonPressed:" destination="2Fj-G8-DEq" eventType="touchUpInside" id="Wyc-p2-Uuu"/>
+                                    <action selector="continueButtonPressed:" destination="DWj-Zq-vTs" eventType="touchUpInside" id="8hA-bS-nO7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1830,27 +1829,32 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="av7-JM-uUr"/>
+                    <connections>
+                        <outlet property="continueButton" destination="Dol-SG-ez5" id="v4J-12-vGe"/>
+                        <outlet property="skiPassTextField" destination="3Nc-MU-Ksc" id="QzZ-6B-yUY"/>
+                        <segue destination="EjQ-SO-tWy" kind="show" identifier="toSkiProficiencyVC" id="Npy-tC-IOZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7n-Ee-3Qb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-542" y="966"/>
+            <point key="canvasLocation" x="-355" y="966"/>
         </scene>
-        <!--View Controller-->
+        <!--Ski Proficiency View Controller-->
         <scene sceneID="7QO-fb-cgb">
             <objects>
-                <viewController id="EjQ-SO-tWy" sceneMemberID="viewController">
+                <viewController id="EjQ-SO-tWy" customClass="SkiProficiencyViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rxb-dK-1w3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's set up your account!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-l1-pDi">
-                                <rect key="frame" x="41.5" y="64" width="331" height="76.5"/>
+                                <rect key="frame" x="41.5" y="108" width="331" height="76.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qnS-Id-oVJ">
-                                <rect key="frame" x="41.5" y="170.5" width="331" height="79"/>
+                                <rect key="frame" x="41.5" y="214.5" width="331" height="79"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ski Proficiency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obb-zQ-lGd">
                                         <rect key="frame" x="0.0" y="0.0" width="166.5" height="29"/>
@@ -1873,14 +1877,14 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <constraint firstItem="SQ7-xO-rnV" firstAttribute="leading" secondItem="qnS-Id-oVJ" secondAttribute="leading" id="ufm-en-JsB"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your ski proficiency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0H-ga-hI2">
-                                <rect key="frame" x="41.5" y="269.5" width="331" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your ski proficiency." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0H-ga-hI2">
+                                <rect key="frame" x="41.5" y="313.5" width="331" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0D-HJ-nit">
-                                <rect key="frame" x="207" y="492" width="165.5" height="50"/>
+                                <rect key="frame" x="207" y="522" width="165.5" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3Yp-q6-oYz"/>
@@ -1890,39 +1894,38 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="BCu-2M-a9T" eventType="touchUpInside" id="Nai-M9-eEY"/>
-                                    <action selector="continueButtonPressed:" destination="2Fj-G8-DEq" eventType="touchUpInside" id="RDy-VR-FKS"/>
+                                    <action selector="continueButtonPressed:" destination="EjQ-SO-tWy" eventType="touchUpInside" id="gPe-Wa-2GF"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="E0S-u8-CgN">
-                                <rect key="frame" x="41.5" y="359" width="331" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0S-u8-CgN">
+                                <rect key="frame" x="41.5" y="403" width="331" height="31"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Rlo-Or-kkG">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rlo-Or-kkG">
                                         <rect key="frame" x="0.0" y="0.0" width="165.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onv-rm-eY6">
-                                                <rect key="frame" x="0.0" y="0.0" width="23" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MC8-43-E6l">
-                                                <rect key="frame" x="116.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="82.5" y="0.0" width="85" height="31"/>
                                                 <color key="onTintColor" systemColor="tintColor"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LV2-u3-Ib6">
-                                        <rect key="frame" x="178.5" y="0.0" width="152.5" height="31"/>
+                                        <rect key="frame" x="165.5" y="0.0" width="165.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snowboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUh-Gd-me9">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ouw-tJ-ml1">
-                                                <rect key="frame" x="103.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="116.5" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" systemColor="tintColor"/>
                                             </switch>
                                         </subviews>
@@ -1933,24 +1936,25 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ski Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhm-Tj-nb1">
-                                <rect key="frame" x="41.5" y="320" width="331" height="29"/>
+                                <rect key="frame" x="41.5" y="364" width="331" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Other users will see your ski types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6k-Fx-4zm">
-                                <rect key="frame" x="42" y="410" width="331" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your ski types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6k-Fx-4zm">
+                                <rect key="frame" x="41.5" y="454" width="331" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a0y-iq-2ju"/>
                         <color key="backgroundColor" red="0.76862745099999996" green="0.87843137250000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="a0y-iq-2ju" firstAttribute="bottom" secondItem="t0D-HJ-nit" secondAttribute="bottom" constant="320" id="126-IG-nv4"/>
+                            <constraint firstItem="a0y-iq-2ju" firstAttribute="bottom" secondItem="t0D-HJ-nit" secondAttribute="bottom" constant="290" id="126-IG-nv4"/>
                             <constraint firstItem="Dhm-Tj-nb1" firstAttribute="top" secondItem="d0H-ga-hI2" secondAttribute="bottom" constant="30" id="58u-LM-PXa"/>
                             <constraint firstItem="E0S-u8-CgN" firstAttribute="top" secondItem="Dhm-Tj-nb1" secondAttribute="bottom" constant="10" id="5Qx-Uc-gFH"/>
+                            <constraint firstItem="Y6k-Fx-4zm" firstAttribute="trailing" secondItem="vDY-l1-pDi" secondAttribute="trailing" id="DnX-dD-e5u"/>
                             <constraint firstItem="d0H-ga-hI2" firstAttribute="top" secondItem="qnS-Id-oVJ" secondAttribute="bottom" constant="20" id="Hes-jV-yEs"/>
                             <constraint firstItem="d0H-ga-hI2" firstAttribute="leading" secondItem="vDY-l1-pDi" secondAttribute="leading" id="JSu-wb-PkZ"/>
                             <constraint firstItem="Y6k-Fx-4zm" firstAttribute="top" secondItem="E0S-u8-CgN" secondAttribute="bottom" constant="20" id="Kph-ow-xeb"/>
@@ -1960,6 +1964,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                             <constraint firstItem="d0H-ga-hI2" firstAttribute="trailing" secondItem="vDY-l1-pDi" secondAttribute="trailing" id="P0v-Gg-gDR"/>
                             <constraint firstItem="vDY-l1-pDi" firstAttribute="top" secondItem="a0y-iq-2ju" secondAttribute="top" constant="20" id="RX1-ZU-iv3"/>
                             <constraint firstItem="Dhm-Tj-nb1" firstAttribute="leading" secondItem="vDY-l1-pDi" secondAttribute="leading" id="Tbg-du-ral"/>
+                            <constraint firstItem="Y6k-Fx-4zm" firstAttribute="leading" secondItem="vDY-l1-pDi" secondAttribute="leading" id="VzH-wK-aSx"/>
                             <constraint firstItem="Dhm-Tj-nb1" firstAttribute="trailing" secondItem="vDY-l1-pDi" secondAttribute="trailing" id="axn-nd-r6W"/>
                             <constraint firstItem="vDY-l1-pDi" firstAttribute="centerX" secondItem="rxb-dK-1w3" secondAttribute="centerX" id="eLW-mm-YYB"/>
                             <constraint firstItem="t0D-HJ-nit" firstAttribute="trailing" secondItem="vDY-l1-pDi" secondAttribute="trailing" id="gpR-RF-YAc"/>
@@ -1971,52 +1976,62 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CBD-pN-SsE"/>
+                    <connections>
+                        <outlet property="continueButton" destination="t0D-HJ-nit" id="J9o-cp-uta"/>
+                        <outlet property="skiProficiencyTextField" destination="SQ7-xO-rnV" id="KzK-nx-efS"/>
+                        <outlet property="skiSwitch" destination="MC8-43-E6l" id="kmW-oD-zDV"/>
+                        <outlet property="snowboardSwitch" destination="Ouw-tJ-ml1" id="MA3-fa-RSe"/>
+                        <segue destination="tH8-9N-evo" kind="show" identifier="toAddPhotoVC" id="g2S-1y-XNd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0F-KQ-oLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155" y="966"/>
+            <point key="canvasLocation" x="343" y="966"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Profile Pic View Controller-->
         <scene sceneID="Idw-jG-e6H">
             <objects>
-                <viewController id="tH8-9N-evo" sceneMemberID="viewController">
+                <viewController id="tH8-9N-evo" customClass="AddProfilePicViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfF-C7-8z6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's set up your account!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piO-H3-leR">
-                                <rect key="frame" x="41.5" y="64" width="331" height="76.5"/>
+                                <rect key="frame" x="41.5" y="108" width="331" height="76.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a photo of yourself!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ox-yV-5WR">
-                                <rect key="frame" x="41.5" y="170.5" width="331" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ox-yV-5WR">
+                                <rect key="frame" x="41.5" y="214.5" width="331" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other users will see your profile photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp5-8U-cei">
-                                <rect key="frame" x="41.5" y="476" width="331" height="21"/>
+                                <rect key="frame" x="41.5" y="520" width="331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8A5-7g-4ZV">
-                                <rect key="frame" x="124" y="231" width="166" height="162.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8A5-7g-4ZV">
+                                <rect key="frame" x="124" y="275" width="166" height="162.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8A5-7g-4ZV" secondAttribute="height" multiplier="1:1" id="Wn1-da-FJQ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WND-9c-qNB">
-                                <rect key="frame" x="127" y="415" width="161" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WND-9c-qNB">
+                                <rect key="frame" x="103.5" y="459" width="207" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Change Profile Photo"/>
+                                <connections>
+                                    <action selector="changeProfilePhotoButtonPressed:" destination="tH8-9N-evo" eventType="touchUpInside" id="7lu-c3-A4B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqU-u9-NnD">
-                                <rect key="frame" x="207" y="527" width="165.5" height="50"/>
+                                <rect key="frame" x="207" y="571" width="165.5" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pDG-pJ-spt"/>
@@ -2026,8 +2041,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="2Fj-G8-DEq" eventType="touchUpInside" id="WqG-Sj-kh9"/>
-                                    <action selector="continueButtonPressed:" destination="BCu-2M-a9T" eventType="touchUpInside" id="ZtA-dh-NdS"/>
+                                    <action selector="continueButtonPressed:" destination="tH8-9N-evo" eventType="touchUpInside" id="kdz-6e-svX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2044,6 +2058,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                             <constraint firstItem="2Ox-yV-5WR" firstAttribute="leading" secondItem="piO-H3-leR" secondAttribute="leading" id="cPG-yz-Pej"/>
                             <constraint firstItem="2Ox-yV-5WR" firstAttribute="top" secondItem="piO-H3-leR" secondAttribute="bottom" constant="30" id="e2K-hb-ECC"/>
                             <constraint firstItem="Gp5-8U-cei" firstAttribute="top" secondItem="WND-9c-qNB" secondAttribute="bottom" constant="30" id="h0D-44-oP9"/>
+                            <constraint firstItem="WND-9c-qNB" firstAttribute="centerX" secondItem="gfF-C7-8z6" secondAttribute="centerX" id="jlU-MZ-Mbn"/>
                             <constraint firstItem="WND-9c-qNB" firstAttribute="top" secondItem="8A5-7g-4ZV" secondAttribute="bottom" constant="20" id="nVX-4o-okg"/>
                             <constraint firstItem="piO-H3-leR" firstAttribute="top" secondItem="k6i-P3-c5X" secondAttribute="top" constant="20" id="nwU-Q0-dFY"/>
                             <constraint firstItem="wqU-u9-NnD" firstAttribute="leading" secondItem="piO-H3-leR" secondAttribute="centerX" id="uiR-tm-FZ8"/>
@@ -2054,14 +2069,36 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EQd-Xx-zW6"/>
+                    <connections>
+                        <outlet property="continueButton" destination="wqU-u9-NnD" id="V7I-Ac-jdX"/>
+                        <outlet property="profileImage" destination="8A5-7g-4ZV" id="DXL-Dd-gdx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQk-X8-8TM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="966"/>
+            <point key="canvasLocation" x="1064" y="966"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X0l-Zp-d8j">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileSetUpVC" automaticallyAdjustsScrollViewInsets="NO" id="FG3-19-UhZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s6Z-oX-4Wj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PEe-t0-VWO" kind="relationship" relationship="rootViewController" id="aX4-zr-pkM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxW-ac-SAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1843" y="230"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="omj-pe-1oz"/>
+        <segue reference="hHv-UR-tGk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Gallery" width="345" height="508"/>

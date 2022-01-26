@@ -9,7 +9,7 @@ import UIKit
 import Contacts
 import NotificationCenter
 
-class continueWithPhoneNumberViewController: UIViewController, UITextFieldDelegate {
+class ContinueWithPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Outlets
     @IBOutlet weak var countryCodeButton: UIButton!
@@ -100,7 +100,7 @@ class continueWithPhoneNumberViewController: UIViewController, UITextFieldDelega
     
 } // End of class
 
-extension continueWithPhoneNumberViewController: UITextViewDelegate {
+extension ContinueWithPhoneNumberViewController: UITextViewDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         // Checks if there is at least 1 character in the text field

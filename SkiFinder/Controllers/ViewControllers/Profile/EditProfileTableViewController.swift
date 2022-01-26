@@ -36,6 +36,7 @@ class EditProfileTableViewController: UITableViewController {
         print("----------------")
         print("Deinit")
     }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
