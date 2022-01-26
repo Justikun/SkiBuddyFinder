@@ -16,6 +16,7 @@ class AddProfilePicViewController: UIViewController {
     
     // MARK: - Properties
     var user: User?
+    
     private var didChangePhoto = false
     
     // MARK: - Lifecycles
@@ -37,18 +38,22 @@ class AddProfilePicViewController: UIViewController {
               let profileImage = profileImage.image else { return }
         savePhoto(photo: profileImage) { url in
             if let url = url {
+                // Saved profile url
                 user.profilePhotoURL = url
                 
-                UserController.shared.createUserInFirebase(user: user) { error in
+                UserController.shared.createUserInFirebase(user: user) { [weak self] error in
+                    guard let self = self else { return }
                     if let error = error {
                         print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
+                    } else {
+                        // Transition to Main Nav Bar
+                        let mainTabBarViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController
+                        self.view.window?.rootViewController = mainTabBarViewController
+                        self.view.window?.makeKeyAndVisible()
                     }
                 }
             }
         }
-        
-        // TODO: - Set  new root view controller
-    
     }
     
     // MARK: - Methods

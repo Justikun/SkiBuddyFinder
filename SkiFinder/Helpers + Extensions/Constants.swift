@@ -9,8 +9,8 @@ import Foundation
 
 struct Constants {
     struct StoryBoard {
-        static let mainNavVC = "MainNavViewController"
-        static let mainTabBarVC = "MainTabBarViewController"
+        static let FeedNVC = "FeedNVC"
+        static let ProfileNVC = "ProfileNVC"
         static let loginVC = "LoginVC"
         static let signUpVC = "SignUpVC"
         static let startPageVC = "StartPageVC"

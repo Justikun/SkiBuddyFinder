@@ -16,7 +16,6 @@
 		3616D605279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3616D604279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift */; };
 		3616D608279A98C500D986ED /* EditSkiDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3616D607279A98C500D986ED /* EditSkiDatesViewController.swift */; };
 		3628A98E278E96A300B4D813 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A98D278E96A200B4D813 /* SignInViewController.swift */; };
-		3628A994278EA0CB00B4D813 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A993278EA0CB00B4D813 /* MainTabBarViewController.swift */; };
 		3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A999278EADE500B4D813 /* ProfileCollectionViewCell.swift */; };
 		3628A99C278EBAAC00B4D813 /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A99B278EBAAC00B4D813 /* ProfileCollectionViewController.swift */; };
 		3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */; };
@@ -55,7 +54,7 @@
 		367535332793029B004129CB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 367535322793029B004129CB /* FirebaseStorageCombine-Community */; };
 		367535352793029B004129CB /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 367535342793029B004129CB /* FirebaseStorageSwift-Beta */; };
 		3675353727969992004129CB /* AllUsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3675353627969991004129CB /* AllUsersController.swift */; };
-		367D7427278D5BEC008D7007 /* MainNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D7426278D5BEC008D7007 /* MainNavViewController.swift */; };
+		367D7427278D5BEC008D7007 /* FeedNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D7426278D5BEC008D7007 /* FeedNavViewController.swift */; };
 		367D742D278D67C1008D7007 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D742C278D67C1008D7007 /* Constants.swift */; };
 		369104A227976FAE00550EBF /* SkiUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369104A127976FAE00550EBF /* SkiUserTableViewController.swift */; };
 		36CF098B27976A71006B0435 /* SkiUserPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF098A27976A71006B0435 /* SkiUserPhotoTableViewCell.swift */; };
@@ -63,6 +62,8 @@
 		36CF099027976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF098F27976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift */; };
 		36DFE1EE27925B0D00151478 /* FirebaseNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */; };
 		36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */; };
+		36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */; };
+		36F9FFF327A20B5A00BAF4BE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */; };
 		36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */; };
 		36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */; };
 		36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */; };
@@ -91,7 +92,6 @@
 		3616D604279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiUserSkiDatesTableViewCell.swift; sourceTree = "<group>"; };
 		3616D607279A98C500D986ED /* EditSkiDatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSkiDatesViewController.swift; sourceTree = "<group>"; };
 		3628A98D278E96A200B4D813 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		3628A993278EA0CB00B4D813 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		3628A999278EADE500B4D813 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		3628A99B278EBAAC00B4D813 /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		365EEB12278C0A3D008E4B8B /* AuthErrorCodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorCodeExtension.swift; sourceTree = "<group>"; };
 		365EEB16278C1483008E4B8B /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		3675353627969991004129CB /* AllUsersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersController.swift; sourceTree = "<group>"; };
-		367D7426278D5BEC008D7007 /* MainNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewController.swift; sourceTree = "<group>"; };
+		367D7426278D5BEC008D7007 /* FeedNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavViewController.swift; sourceTree = "<group>"; };
 		367D742C278D67C1008D7007 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		369104A127976FAE00550EBF /* SkiUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiUserTableViewController.swift; sourceTree = "<group>"; };
 		36CF098A27976A71006B0435 /* SkiUserPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiUserPhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +112,8 @@
 		36CF098F27976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiScheduleHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkError.swift; sourceTree = "<group>"; };
 		36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileInUse.swift; sourceTree = "<group>"; };
+		36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		36FC23AD279F841100CC7255 /* SkiFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkiFinder.entitlements; sourceTree = "<group>"; };
 		36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				365EEB09278BDA81008E4B8B /* User.swift */,
+				36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,8 +340,8 @@
 		36FC23B1279F937700CC7255 /* Main Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				367D7426278D5BEC008D7007 /* MainNavViewController.swift */,
-				3628A993278EA0CB00B4D813 /* MainTabBarViewController.swift */,
+				367D7426278D5BEC008D7007 /* FeedNavViewController.swift */,
+				36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */,
 			);
 			path = "Main Navigation";
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				369104A227976FAE00550EBF /* SkiUserTableViewController.swift in Sources */,
 				36FC23D827A0C6E400CC7255 /* AddProfilePicViewController.swift in Sources */,
 				36FC23D027A0B0F100CC7255 /* FirstNameViewController.swift in Sources */,
+				36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */,
 				36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */,
 				3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */,
 				360DBB3E278A3E5600F41CBF /* AppDelegate.swift in Sources */,
@@ -555,6 +559,7 @@
 				36FC23D227A0B17600CC7255 /* BirthDateViewController.swift in Sources */,
 				36FC23BF279FDD5B00CC7255 /* LoginSignUpNavViewController.swift in Sources */,
 				365EEB17278C1483008E4B8B /* UserTableViewCell.swift in Sources */,
+				36F9FFF327A20B5A00BAF4BE /* MainTabBarViewController.swift in Sources */,
 				36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */,
 				36FC23C1279FE6DE00CC7255 /* AuthManager.swift in Sources */,
 				36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */,
@@ -562,10 +567,9 @@
 				3628A9AC278FCF0A00B4D813 /* DateExtension.swift in Sources */,
 				363C47032798B21E005DB518 /* SkiUserCalendarTableViewCell.swift in Sources */,
 				365EEB08278BDA1F008E4B8B /* FeedTableViewController.swift in Sources */,
-				3628A994278EA0CB00B4D813 /* MainTabBarViewController.swift in Sources */,
 				3675353727969992004129CB /* AllUsersController.swift in Sources */,
 				36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */,
-				367D7427278D5BEC008D7007 /* MainNavViewController.swift in Sources */,
+				367D7427278D5BEC008D7007 /* FeedNavViewController.swift in Sources */,
 				36FC23BD279FD8E500CC7255 /* DatabaseManager.swift in Sources */,
 				3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */,
 				3628A99C278EBAAC00B4D813 /* ProfileCollectionViewController.swift in Sources */,

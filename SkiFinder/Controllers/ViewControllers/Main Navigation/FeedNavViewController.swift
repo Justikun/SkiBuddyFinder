@@ -1,5 +1,5 @@
 //
-//  MainNavViewController.swift
+//  FeedNavViewController.swift
 //  SkiFinder
 //
 //  Created by Justin Lowry on 1/10/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainNavViewController: UINavigationController {
+class FeedNavViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

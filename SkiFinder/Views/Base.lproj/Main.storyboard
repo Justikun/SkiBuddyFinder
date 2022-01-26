@@ -107,7 +107,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-6U-c7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936" y="-127"/>
+            <point key="canvasLocation" x="2845" y="-812"/>
         </scene>
         <!--Ski User Table View Controller-->
         <scene sceneID="BdP-HB-1k1">
@@ -474,7 +474,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfG-1u-TVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2811.594202898551" y="-689.0625"/>
+            <point key="canvasLocation" x="3722" y="-1374"/>
         </scene>
         <!--Start Screen View Controller-->
         <scene sceneID="d7J-jT-nUB">
@@ -666,6 +666,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         <outlet property="countryCodeButton" destination="Q4h-av-E51" id="BYX-1s-8FR"/>
                         <outlet property="loadingIndicator" destination="mCY-Li-mJf" id="lqn-pc-mll"/>
                         <outlet property="phoneNumberTextField" destination="E4t-aj-m5t" id="omU-Lm-TNX"/>
+                        <segue destination="2Fj-G8-DEq" kind="show" identifier="toVerifyPhoneNumberVC" id="yaf-Oj-4zE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSW-Dj-Csr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -681,19 +682,19 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U4-qh-76L">
-                                <rect key="frame" x="41.5" y="64" width="331" height="38.5"/>
+                                <rect key="frame" x="41.5" y="108" width="331" height="38.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will send a text with a verification code." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1u-yO-On3">
-                                <rect key="frame" x="41.5" y="132.5" width="331" height="43"/>
+                                <rect key="frame" x="41.5" y="176.5" width="331" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="BRw-Wn-3yF" customClass="OneTimeCodeTextField" customModule="SkiFinder" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="205.5" width="331" height="70"/>
+                                <rect key="frame" x="41.5" y="249.5" width="331" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="dKZ-Dh-4lk"/>
@@ -858,7 +859,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         <!--Item-->
         <scene sceneID="0lq-Im-R4U">
             <objects>
-                <navigationController storyboardIdentifier="MainNavViewController" id="1WO-Ib-KPf" customClass="MainNavViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNVC" id="1WO-Ib-KPf" customClass="FeedNavViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="HdI-6Q-4Zg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0M3-qr-22M">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -870,7 +871,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTi-5S-bs9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="-127"/>
+            <point key="canvasLocation" x="1980" y="-812"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fmz-Ag-q77">
@@ -907,7 +908,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7j-nU-Yid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156.52173913043478" y="62.946428571428569"/>
+            <point key="canvasLocation" x="1064" y="-309"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="fXW-3C-8bX">
@@ -1117,7 +1118,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HX3-lt-oco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4710.144927536232" y="557.8125"/>
+            <point key="canvasLocation" x="2845" y="173"/>
         </scene>
         <!--Edit Ski Dates View Controller-->
         <scene sceneID="7uU-9P-0iW">
@@ -1243,7 +1244,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ef-55-Mhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5597.1014492753629" y="1273.6607142857142"/>
+            <point key="canvasLocation" x="2845" y="949"/>
         </scene>
         <!--Edit Profile Table View Controller-->
         <scene sceneID="wDt-og-iNd">
@@ -1546,12 +1547,12 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymp-LH-yn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5597.1014492753629" y="557.8125"/>
+            <point key="canvasLocation" x="3732" y="173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9V2-wE-wsf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="93p-b6-qha" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileNVC" automaticallyAdjustsScrollViewInsets="NO" id="93p-b6-qha" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" id="4yH-zJ-WWP">
                         <imageReference key="image" image="person" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
                             <hierarchicalColors>
@@ -1573,7 +1574,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiR-HP-day" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3800.0000000000005" y="557.8125"/>
+            <point key="canvasLocation" x="1980" y="174"/>
         </scene>
         <!--First Name View Controller-->
         <scene sceneID="gEh-Mr-jq4">
@@ -2083,6 +2084,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
             <objects>
                 <navigationController storyboardIdentifier="ProfileSetUpVC" automaticallyAdjustsScrollViewInsets="NO" id="FG3-19-UhZ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="1SA-mU-cBW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s6Z-oX-4Wj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2098,7 +2100,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hHv-UR-tGk"/>
+        <segue reference="8wC-DI-yCR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Gallery" width="345" height="508"/>

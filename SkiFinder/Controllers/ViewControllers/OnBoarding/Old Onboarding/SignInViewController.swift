@@ -50,7 +50,7 @@ class SignInViewController: UIViewController {
     }
     
     func transitionToMainTabBarVC() {
-        let mainTabBarViewController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryBoard.mainTabBarVC) as? MainTabBarViewController
+        let mainTabBarViewController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryBoard.ProfileNVC) as? MainTabBarViewController
         
         view.window?.rootViewController = mainTabBarViewController
         view.window?.makeKeyAndVisible()

@@ -37,22 +37,23 @@ class ContinueWithPhoneNumberViewController: UIViewController, UITextFieldDelega
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         loadingIndicator.startAnimating()
         
-        guard let phoneNumber = phoneNumberTextField.text else { return }
+        guard let basePhoneNumber = phoneNumberTextField.text else { return }
+        let phoneNumber = "+1\(basePhoneNumber)"
         
         // Checks to firebase if this is a valid number and sends verification to SMS
-        AuthManager.shared.continueWith(phoneNumber: "+1\(phoneNumber)") { success in
-            guard success else {
+        AuthManager.shared.continueWith(phoneNumber: phoneNumber) {[weak self] success in
+            guard let self = self else { return }
+        
+            if success {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "toVerifyPhoneNumberVC", sender: phoneNumber)
+                }
+            } else {
                 DispatchQueue.main.async {
                     self.showAlert(title: "Invalid Phone Number", message: "Please enter a valid phone number")
                     self.loadingIndicator.stopAnimating()
                 }
                 return
-            }
-            
-            DispatchQueue.main.async {
-                let verificationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VerifyPhoneNumberVC")
-                self.loadingIndicator.stopAnimating()
-                self.navigationController?.pushViewController(verificationVC, animated: true)
             }
         }
     }
@@ -91,10 +92,10 @@ class ContinueWithPhoneNumberViewController: UIViewController, UITextFieldDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toPhoneVerificationVC" {
-            guard let destinationVC = segue.destination as? VerifyPhoneNumberViewController else {
-                return
-            }
+        if segue.identifier == "toVerifyPhoneNumberVC" {
+            guard let destinationVC = segue.destination as? VerifyPhoneNumberViewController,
+                  let number = sender as? String else { return }
+            destinationVC.number = number
         }
     }
     

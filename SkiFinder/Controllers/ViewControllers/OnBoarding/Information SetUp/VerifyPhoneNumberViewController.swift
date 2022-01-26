@@ -15,7 +15,7 @@ class VerifyPhoneNumberViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
-    var window: UIWindow?
+    var number: String?
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -34,6 +34,8 @@ class VerifyPhoneNumberViewController: UIViewController {
     // MARK: - Methods
     private func authenticateCode(_ code: String) {
         loadingIndicator.startAnimating()
+        guard let mobileNumber = number else { return }
+
         AuthManager.shared.verifyCode(smsCode: code) { [weak self] success in
             guard let self = self else { return }
             self.loadingIndicator.stopAnimating()
@@ -43,12 +45,29 @@ class VerifyPhoneNumberViewController: UIViewController {
                 return
             }
             
-            // Begin onboarding
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "ProfileSetUpVC")
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: false, completion: nil)
-            
+            // Check if account with phone number exists
+            DatabaseManager.shared.checkMobile(number: mobileNumber) { [weak self] accountExists in
+                guard let self = self else { return }
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                var vc = UIViewController()
+                
+                if accountExists {
+                    let mainTabBarViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController
+                    self.view.window?.rootViewController = mainTabBarViewController
+                    self.view.window?.makeKeyAndVisible()
+                    
+                } else {
+                    // Add number to numbers in use
+                    let mobile = MobileInUse(number: mobileNumber)
+                    DatabaseManager.shared.addNumberToMobileNumbers(mobile: mobile) { success in
+                        guard success else { return }
+                    }
+                    vc = storyboard.instantiateViewController(identifier: "ProfileSetUpVC")
+                }
+                
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false, completion: nil)
+            }
         }
     }
     
@@ -74,5 +93,4 @@ class VerifyPhoneNumberViewController: UIViewController {
             self?.authenticateCode(code)
         }
     }
-    
 }
