@@ -11,7 +11,6 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserController.shared.fetchCurrentUser { didFetch in }
-        print("______FETCHED_______")
+        UserController.shared.fetchCurrentUser { _ in }
     }
 }

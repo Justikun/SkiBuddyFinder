@@ -42,6 +42,7 @@ class DatabaseManager {
         }
     }
     
+    /// Adds phone number active phone numbers in firebase
     func addNumberToMobileNumbers(mobile: MobileInUse, completion: @escaping(Bool) -> Void) {
         do {
             try _ = db.collection(Strings.mobileNumbers).addDocument(from: mobile)

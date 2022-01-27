@@ -64,6 +64,8 @@
 		36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */; };
 		36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */; };
 		36F9FFF327A20B5A00BAF4BE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */; };
+		36F9FFF627A218F800BAF4BE /* Buddies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF527A218F800BAF4BE /* Buddies.swift */; };
+		36F9FFF827A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */; };
 		36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */; };
 		36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */; };
 		36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */; };
@@ -114,6 +116,8 @@
 		36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileInUse.swift; sourceTree = "<group>"; };
 		36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		36F9FFF527A218F800BAF4BE /* Buddies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddies.swift; sourceTree = "<group>"; };
+		36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBuddyCollectionViewCell.swift; sourceTree = "<group>"; };
 		36FC23AD279F841100CC7255 /* SkiFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkiFinder.entitlements; sourceTree = "<group>"; };
 		36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 			children = (
 				36FC23B1279F937700CC7255 /* Main Navigation */,
 				36FC23B0279F936B00CC7255 /* Feed */,
+				36F9FFF427A2188C00BAF4BE /* Ski Buddies */,
 				36FC23AF279F935500CC7255 /* Profile */,
 				36FC23AE279F933B00CC7255 /* OnBoarding */,
 			);
@@ -304,6 +309,15 @@
 				3616D604279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift */,
 			);
 			path = SkiUserProfiles;
+			sourceTree = "<group>";
+		};
+		36F9FFF427A2188C00BAF4BE /* Ski Buddies */ = {
+			isa = PBXGroup;
+			children = (
+				36F9FFF527A218F800BAF4BE /* Buddies.swift */,
+				36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */,
+			);
+			path = "Ski Buddies";
 			sourceTree = "<group>";
 		};
 		36FC23AE279F933B00CC7255 /* OnBoarding */ = {
@@ -552,6 +566,7 @@
 				36FC23D027A0B0F100CC7255 /* FirstNameViewController.swift in Sources */,
 				36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */,
 				36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */,
+				36F9FFF627A218F800BAF4BE /* Buddies.swift in Sources */,
 				3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */,
 				360DBB3E278A3E5600F41CBF /* AppDelegate.swift in Sources */,
 				3616D605279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift in Sources */,
@@ -573,6 +588,7 @@
 				36FC23BD279FD8E500CC7255 /* DatabaseManager.swift in Sources */,
 				3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */,
 				3628A99C278EBAAC00B4D813 /* ProfileCollectionViewController.swift in Sources */,
+				36F9FFF827A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift in Sources */,
 				360DBB40278A3E5600F41CBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

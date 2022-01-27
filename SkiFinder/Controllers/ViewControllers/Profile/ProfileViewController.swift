@@ -24,11 +24,18 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         updateViews()
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     
     // MARK: - Actions
     @IBAction func addPhotoPressed(_ sender: UIButton) {

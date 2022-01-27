@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -107,7 +108,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-6U-c7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2845" y="-812"/>
+            <point key="canvasLocation" x="2771" y="-1330"/>
         </scene>
         <!--Ski User Table View Controller-->
         <scene sceneID="BdP-HB-1k1">
@@ -387,7 +388,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-zD-cIW">
                                             <rect key="frame" x="67" y="12" width="280.5" height="20"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
                                                     <rect key="frame" x="0.0" y="0.0" width="111.5" height="20"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-Md-V71">
@@ -409,7 +410,7 @@
                                                                 <constraint firstItem="1vI-c7-RaJ" firstAttribute="centerX" secondItem="PEQ-Md-V71" secondAttribute="centerX" id="zlM-dm-Nwq"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
                                                             <rect key="frame" x="48" y="0.0" width="63.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -417,7 +418,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
                                                     <rect key="frame" x="141.5" y="0.0" width="139" height="20"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3J-lD-tlE">
@@ -439,7 +440,7 @@
                                                                 <constraint firstAttribute="width" secondItem="v3J-lD-tlE" secondAttribute="height" multiplier="1:1" id="Z3O-aq-ZuD"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
                                                             <rect key="frame" x="48" y="0.0" width="91" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -474,7 +475,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfG-1u-TVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3722" y="-1374"/>
+            <point key="canvasLocation" x="3648" y="-1892"/>
         </scene>
         <!--Start Screen View Controller-->
         <scene sceneID="d7J-jT-nUB">
@@ -864,6 +865,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0M3-qr-22M">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="6ee-vw-5Nr" kind="relationship" relationship="rootViewController" id="0oU-0f-1x4"/>
@@ -871,7 +873,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTi-5S-bs9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="-812"/>
+            <point key="canvasLocation" x="1906" y="-1330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fmz-Ag-q77">
@@ -904,6 +906,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                     <connections>
                         <segue destination="1WO-Ib-KPf" kind="relationship" relationship="viewControllers" id="gSY-lT-AVj"/>
                         <segue destination="93p-b6-qha" kind="relationship" relationship="viewControllers" id="r2b-sj-huM"/>
+                        <segue destination="5g3-Ud-Mfy" kind="relationship" relationship="viewControllers" id="fjO-Qv-gR2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7j-nU-Yid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -974,6 +977,53 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
             </objects>
             <point key="canvasLocation" x="-1371" y="-1269"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nRc-Zs-k7r">
+            <objects>
+                <navigationController id="5g3-Ud-Mfy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="message" catalog="system" id="riE-va-av4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQV-3h-w8r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="I65-Wb-4o1" kind="relationship" relationship="rootViewController" id="2VJ-9Z-YFn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ht-uE-No3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="-563"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="cGd-2O-hlu">
+            <objects>
+                <viewController title="Chat" id="I65-Wb-4o1" customClass="Buddies" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U51-7l-Sf0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-WG-SEY">
+                                <rect key="frame" x="0.0" y="200" width="414" height="613"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wuH-bZ-zoe"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ROm-WG-SEY" firstAttribute="top" secondItem="U51-7l-Sf0" secondAttribute="top" constant="200" id="4cQ-Am-hA5"/>
+                            <constraint firstItem="wuH-bZ-zoe" firstAttribute="bottom" secondItem="ROm-WG-SEY" secondAttribute="bottom" id="Odk-wD-DbR"/>
+                            <constraint firstItem="wuH-bZ-zoe" firstAttribute="trailing" secondItem="ROm-WG-SEY" secondAttribute="trailing" id="b4H-pR-YGu"/>
+                            <constraint firstItem="ROm-WG-SEY" firstAttribute="leading" secondItem="wuH-bZ-zoe" secondAttribute="leading" id="syZ-ig-z94"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buddies" id="f6O-KX-8MT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRs-qS-UAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2769.5652173913045" y="-563.16964285714278"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="m4H-7u-W73">
             <objects>
@@ -983,7 +1033,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yym-aF-eI7">
-                                <rect key="frame" x="0.0" y="434.5" width="414" height="461.5"/>
+                                <rect key="frame" x="0.0" y="416.5" width="414" height="479.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cll-JZ-kFu">
                                     <size key="itemSize" width="128" height="128"/>
@@ -1017,7 +1067,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65X-g6-AC2">
-                                <rect key="frame" x="0.0" y="88" width="414" height="326.5"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="326.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ueK-H0-tgW">
                                         <rect key="frame" x="103.5" y="20" width="207" height="207"/>
@@ -1103,7 +1153,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                             <constraint firstItem="65X-g6-AC2" firstAttribute="trailing" secondItem="H7N-KP-5ZO" secondAttribute="trailing" id="EVb-7K-h6q"/>
                             <constraint firstItem="65X-g6-AC2" firstAttribute="leading" secondItem="H7N-KP-5ZO" secondAttribute="leading" id="EXV-wx-VGi"/>
                             <constraint firstItem="Yym-aF-eI7" firstAttribute="trailing" secondItem="H7N-KP-5ZO" secondAttribute="trailing" id="Vtu-56-aSf"/>
-                            <constraint firstItem="65X-g6-AC2" firstAttribute="top" secondItem="H7N-KP-5ZO" secondAttribute="top" id="he3-RV-ftr"/>
+                            <constraint firstItem="65X-g6-AC2" firstAttribute="top" secondItem="diD-Pg-csH" secondAttribute="top" constant="70" id="he3-RV-ftr"/>
                             <constraint firstItem="Yym-aF-eI7" firstAttribute="top" secondItem="65X-g6-AC2" secondAttribute="bottom" constant="20" id="mm3-tw-qMd"/>
                             <constraint firstItem="65X-g6-AC2" firstAttribute="height" secondItem="H7N-KP-5ZO" secondAttribute="height" multiplier="0.45" id="yQy-8r-iuQ"/>
                         </constraints>
@@ -1259,17 +1309,17 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="31" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDc-tg-dAJ">
-                                    <rect key="frame" x="126.5" y="0.0" width="161" height="193"/>
+                                    <rect key="frame" x="126.5" y="3.5" width="161" height="186"/>
                                     <subviews>
                                         <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dG5-Ts-b4N">
-                                            <rect key="frame" x="8" y="0.0" width="145" height="145"/>
+                                            <rect key="frame" x="8" y="0.0" width="145" height="144.5"/>
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="dG5-Ts-b4N" secondAttribute="height" multiplier="1:1" id="rBc-3w-cSg"/>
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rud-Bz-gUY">
-                                            <rect key="frame" x="0.0" y="162" width="161" height="31"/>
+                                            <rect key="frame" x="0.0" y="155" width="161" height="31"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Change Profile Photo"/>
                                             <connections>
@@ -1279,16 +1329,15 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     </subviews>
                                 </stackView>
                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JnE-eV-3z5">
-                                    <rect key="frame" x="197" y="62.5" width="20" height="20"/>
+                                    <rect key="frame" x="197" y="66" width="20" height="20"/>
                                 </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="fDc-tg-dAJ" firstAttribute="centerY" secondItem="ESv-0o-I40" secondAttribute="centerY" id="9RB-nE-lSl"/>
                                 <constraint firstItem="dG5-Ts-b4N" firstAttribute="width" secondItem="ESv-0o-I40" secondAttribute="width" multiplier="0.35" id="HAI-nA-s8s"/>
                                 <constraint firstItem="JnE-eV-3z5" firstAttribute="centerY" secondItem="dG5-Ts-b4N" secondAttribute="centerY" id="N2Z-5a-14Z"/>
                                 <constraint firstItem="fDc-tg-dAJ" firstAttribute="centerX" secondItem="ESv-0o-I40" secondAttribute="centerX" id="ORE-yn-A6m"/>
-                                <constraint firstItem="fDc-tg-dAJ" firstAttribute="top" secondItem="ESv-0o-I40" secondAttribute="top" id="cw2-u0-QQM"/>
-                                <constraint firstAttribute="bottom" secondItem="fDc-tg-dAJ" secondAttribute="bottom" id="gcb-9q-EYW"/>
                                 <constraint firstItem="JnE-eV-3z5" firstAttribute="centerX" secondItem="dG5-Ts-b4N" secondAttribute="centerX" id="oBG-VX-xSb"/>
                             </constraints>
                         </view>
@@ -1566,6 +1615,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bGo-CR-INA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -2108,12 +2158,16 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="diamondIcon" width="60" height="60"/>
         <image name="locationIcon" width="50" height="50"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <image name="mountainIcon" width="50" height="50"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="wind.snow" catalog="system" width="128" height="112"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
