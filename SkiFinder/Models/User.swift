@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseFirestoreSwift
-
+import MessageKit
 
 
 class User: Identifiable, Codable {
@@ -27,6 +27,9 @@ class User: Identifiable, Codable {
     var photoURLS: [String]
     var onboardingComplete: Bool
     
+    var buddies: [Buddy]
+    var chats: [Chat]
+    
     enum CodingKeys: String, CodingKey {
         case uid = "uid"
         case firstName = "first_name"
@@ -42,6 +45,9 @@ class User: Identifiable, Codable {
         case profilePhotoURL = "profile_photo_url"
         case photoURLS = "photo_urls"
         case onboardingComplete = "onboarding_complete"
+        
+        case buddies = "buddies"
+        case chats = "chats"
     }
     
     
@@ -58,7 +64,10 @@ class User: Identifiable, Codable {
          skiTypes: SkiTypes = SkiTypes(ski: false, snowboard: false),
          profilePhotoURL: String = "",
          photoURLS: [String] = [],
-         onboardingComplete: Bool = false
+         onboardingComplete: Bool = false,
+         
+         buddies: [Buddy] = [],
+         chats: [Chat] = []
     ) {
         self.uid = uid
         self.firstName = firstName
@@ -74,6 +83,24 @@ class User: Identifiable, Codable {
         self.profilePhotoURL = profilePhotoURL
         self.photoURLS = photoURLS
         self.onboardingComplete = onboardingComplete
+        
+        self.buddies = buddies
+        self.chats = chats
+    }
+}
+
+class Buddy: Codable {
+    let buddyId: String
+    var didStartConversation: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case buddyId = "buddy_id"
+        case didStartConversation = "did_start_conversation"
+    }
+    
+    init(buddyId: String, didStartConversation: Bool = false) {
+        self.buddyId = buddyId
+        self.didStartConversation = didStartConversation
     }
 }
 
@@ -111,5 +138,58 @@ struct SkiTypes: Codable {
     enum CodingKeys: String, CodingKey {
         case ski
         case snowboard
+    }
+}
+
+// ------CONVERSATION------
+
+struct Chat: Codable {
+    var conversationId: String
+    var otherUserUid: String
+    var latestMessage: LatestMessage
+    
+    enum CodingKeys: String, CodingKey {
+        case conversationId = "conversation_id"
+        case otherUserUid = "other_user_uid"
+        case latestMessage = "latestMessage"
+    }
+}
+
+class LatestMessage: Codable {
+    var date: Date
+    var isRead: Bool
+    var message: String
+    
+    enum CodingKeys: String, CodingKey {
+        case date = "date"
+        case isRead = "is_read"
+        case message = "message"
+    }
+}
+
+struct Conversation: Codable{
+    var conversationId: String
+    var messages: [Message]
+    
+    enum CodingKeys: String, CodingKey {
+        case conversationId = "conversation_id"
+        case messages = "messages"
+    }
+    
+}
+
+struct Message: Codable {
+    var messageId: String
+    var senderUid: String
+    var content: String
+    var date: Date
+    var isRead: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case messageId = "message_id"
+        case senderUid = "sender_uid"
+        case content = "content"
+        case date = "date"
+        case isRead = "is_read"
     }
 }

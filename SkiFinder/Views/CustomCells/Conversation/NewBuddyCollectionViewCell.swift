@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NewBuddyCollectionViewCell: UICollectionViewCell {
     static let identifier = "NewBuddyCollectionViewCell"
@@ -48,9 +49,20 @@ class NewBuddyCollectionViewCell: UICollectionViewCell {
         nameLabel.frame = CGRect(x: 0, y: 90, width: 80, height: 22)
     }
     
-    public func configure(with name: String) {
-        profilePic.image = UIImage(named: name)
-        nameLabel.text = "Madi"
+    public func configure(user: User) {
+        let imagePath = user.uid
+        StorageManager.shared.getDownloadURL(for: imagePath) {[weak self] result in
+            switch result {
+            case .success(let url):
+                DispatchQueue.main.async {
+                    self?.profilePic.sd_setImage(with: url)
+                }
+            case .failure(let error):
+                print("Failed to get image download URL:\(error)")
+            }
+        }
+        
+        nameLabel.text = user.firstName 
     }
     
     override func prepareForReuse() {

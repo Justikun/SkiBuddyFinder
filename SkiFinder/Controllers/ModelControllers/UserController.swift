@@ -23,16 +23,7 @@ class UserController {
     // Source of truth
     var user: User?
     
-    func setCurrentUser() {
-        // Get reference to the database
-        let db = Firestore.firestore()
-        
-        // Read documents at a specific path
-        db.collection("users")
-    }
-    
-    // MARK: - CRUD
-    // Create
+    /// Sign up a user
     func signUpUser(withEmail email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void ) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
@@ -44,6 +35,7 @@ class UserController {
         }
     }
     
+    /// Creates a user in Firestore from type User
     func createUserInFirebase(user: User, completion: @escaping (Error?) -> Void ) {
         let db = Firestore.firestore()
         
@@ -56,7 +48,7 @@ class UserController {
         }
     }
     
-    // Fetch
+    /// Fetch currently signed in user
     func fetchCurrentUser(completion: @escaping(Bool) -> Void) {
         if let currentUser = Auth.auth().currentUser {
             self.db.collection(Constants.Firebase.User.usersCollectionKey).whereField(Constants.Firebase.User.uidKey, isEqualTo: currentUser.uid).getDocuments { snapshot, error in
@@ -74,7 +66,7 @@ class UserController {
         }
     }
     
-    // SaveProfile Photo to storage
+    /// SaveProfile Photo to storage
     func saveProfilePhoto(_ photo: UIImage, completion: @escaping(URL?) -> Void) {
         guard let uid = auth.currentUser?.uid else { return }
         
@@ -102,9 +94,9 @@ class UserController {
         }
     }
     
-    // Save Ski dates
+    /// Saves Ski dates for the current user on firestore
     func saveSkiDates(_ skiDates: SkiDates, completion: @escaping (Bool) -> Void) {
-        guard let user = user else { return }
+        guard let user = user else { return completion(false) }
         
         // Searching Firestore for a uid match of the user we want to update
         db.collection(Constants.Firebase.User.usersCollectionKey).whereField(Constants.Firebase.User.uidKey, isEqualTo: user.uid).getDocuments { snapshot, error in
@@ -131,8 +123,10 @@ class UserController {
         }
     }
     
-    // Update
+    /// Updates user information on Firestore
     func updateUser(_ user: User, completion: @escaping (Bool) -> Void) {
+        // TODO: - temp line
+        user.buddies = [Buddy(buddyId: "b3r0uwn9kyWsp4ioBAaL9fY2qA32", didStartConversation: false)]
         
         // Searching Firestore for a uid match of the user we want to update
         db.collection(Constants.Firebase.User.usersCollectionKey).whereField(Constants.Firebase.User.uidKey, isEqualTo: user.uid).getDocuments { snapshot, error in
@@ -159,5 +153,38 @@ class UserController {
     }
     
         
-    // Delete
+    /// Returns an array of the current user's buddiestemp
+    func getBuddies(completion: @escaping (Result<[User], FirebaseNetworkError>) -> Void) {
+        guard let user = user else { return completion(.failure(.noSignedInUser))}
+        
+        // Gets all the uids for each buddy the current user hasn't started a converation with
+        let buddyUids: [String] = user.buddies.compactMap { buddy in
+            if !buddy.didStartConversation {
+                return buddy.buddyId
+            }
+            return nil
+        }
+        
+        
+        let usersRef = db.collection("users")
+        // TODO: - This 'in' operation will only grab 10 elements. Paginate the data to get the other elements
+        usersRef.whereField("uid", in: buddyUids).getDocuments { snapshot, error in
+            if let error = error {
+                completion(.failure(.thrownError(error)))
+            } else if let snapshot = snapshot {
+                do {
+                    let users: [User] = try snapshot.documents.compactMap({
+                        try $0.data(as: User.self)
+                    })
+                    
+                    return completion(.success(users))
+                } catch {
+                    return completion(.failure(.unableToDecode))
+                }
+            }
+        }
+    }
+    
+    
+    /// Deletes a user on firestore
 }

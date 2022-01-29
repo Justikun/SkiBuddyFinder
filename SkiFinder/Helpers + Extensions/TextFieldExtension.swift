@@ -44,6 +44,18 @@ extension UIButton {
     }
 }
 
+extension UIImageView {
+    func setCircleShape() {
+        self.clipsToBounds = true
+        self.contentMode = .scaleAspectFill
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = self.fs_width / 2.0
+        self.backgroundColor = .gray
+        self.layer.borderColor = UIColor.darkGray.cgColor
+        self.layer.borderWidth = 1.5
+    }
+}
+
 extension UIViewController {
     //Show a basic alert
     func showAlert(title : String, message : String) {

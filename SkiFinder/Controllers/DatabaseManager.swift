@@ -17,8 +17,7 @@ class DatabaseManager {
     static let shared = DatabaseManager()
     
     /// Database
-    private var db = Firestore.firestore()
-    
+    private let db = Firestore.firestore()
     
     /// Checks if phone number is in use
     func checkMobile(number: String, completion: @escaping (Bool) -> Void) {
@@ -51,5 +50,21 @@ class DatabaseManager {
             print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
             completion(false)
         }
+    }
+    
+    func fetchAllChats(forUid uid: String, completion: @escaping(Result<[Chat], FirebaseNetworkError>) -> Void) {
+        let usersRef = db.collection(Constants.Firebase.User.usersCollectionKey)
+        
+        usersRef.whereField("chats", isEqualTo: uid).getDocuments { snapshot, error in
+            if let error = error {
+                return completion(.failure(.thrownError(error)))
+            } else if let snapshot = snapshot {
+                let chats: [Chat] = snapshot.documents.compactMap { chat in
+                    try? chat.data(as: Chat.self)
+                }
+                return completion(.success(chats))
+            }
+        }
+        
     }
 }

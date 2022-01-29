@@ -8,5 +8,6 @@ target 'SkiFinder' do
   # Pods for SkiFinder
 
 pod 'FSCalendar'
+pod 'RealmSwift'
 
 end

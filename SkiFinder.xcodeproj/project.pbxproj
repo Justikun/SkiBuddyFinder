@@ -21,6 +21,8 @@
 		3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */; };
 		3628A9AC278FCF0A00B4D813 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A9AB278FCF0A00B4D813 /* DateExtension.swift */; };
 		363C47032798B21E005DB518 /* SkiUserCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C47022798B21E005DB518 /* SkiUserCalendarTableViewCell.swift */; };
+		3658753E27A4AD6D00D053A8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658753D27A4AD6D00D053A8 /* StorageManager.swift */; };
+		3658754127A4B43900D053A8 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754027A4B43900D053A8 /* ChatTableViewCell.swift */; };
 		365EEB08278BDA1F008E4B8B /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */; };
 		365EEB0A278BDA81008E4B8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB09278BDA81008E4B8B /* User.swift */; };
 		365EEB0C278BE15E008E4B8B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB0B278BE15E008E4B8B /* UserController.swift */; };
@@ -62,10 +64,14 @@
 		36CF099027976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF098F27976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift */; };
 		36DFE1EE27925B0D00151478 /* FirebaseNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */; };
 		36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */; };
+		36F9000227A2632F00BAF4BE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 36F9000127A2632F00BAF4BE /* SDWebImage */; };
+		36F9000427A2632F00BAF4BE /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36F9000327A2632F00BAF4BE /* SDWebImageMapKit */; };
+		36F9000827A26D4E00BAF4BE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9000727A26D4E00BAF4BE /* ChatViewController.swift */; };
 		36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */; };
 		36F9FFF327A20B5A00BAF4BE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */; };
-		36F9FFF627A218F800BAF4BE /* Buddies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF527A218F800BAF4BE /* Buddies.swift */; };
+		36F9FFF627A218F800BAF4BE /* BuddiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF527A218F800BAF4BE /* BuddiesViewController.swift */; };
 		36F9FFF827A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */; };
+		36F9FFFF27A25A5000BAF4BE /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36F9FFFE27A25A5000BAF4BE /* MessageKit */; };
 		36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */; };
 		36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */; };
 		36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */; };
@@ -99,6 +105,8 @@
 		3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3628A9AB278FCF0A00B4D813 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		363C47022798B21E005DB518 /* SkiUserCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiUserCalendarTableViewCell.swift; sourceTree = "<group>"; };
+		3658753D27A4AD6D00D053A8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		3658754027A4B43900D053A8 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		365EEB09278BDA81008E4B8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		365EEB0B278BE15E008E4B8B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -114,9 +122,10 @@
 		36CF098F27976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiScheduleHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkError.swift; sourceTree = "<group>"; };
 		36DFE1EF2792662700151478 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		36F9000727A26D4E00BAF4BE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileInUse.swift; sourceTree = "<group>"; };
 		36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		36F9FFF527A218F800BAF4BE /* Buddies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddies.swift; sourceTree = "<group>"; };
+		36F9FFF527A218F800BAF4BE /* BuddiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddiesViewController.swift; sourceTree = "<group>"; };
 		36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBuddyCollectionViewCell.swift; sourceTree = "<group>"; };
 		36FC23AD279F841100CC7255 /* SkiFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkiFinder.entitlements; sourceTree = "<group>"; };
 		36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithPhoneNumberViewController.swift; sourceTree = "<group>"; };
@@ -145,9 +154,11 @@
 				3675352D2793029B004129CB /* FirebasePerformance in Frameworks */,
 				3675351B2793029B004129CB /* FirebaseFirestoreCombine-Community in Frameworks */,
 				367535152793029B004129CB /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				36F9FFFF27A25A5000BAF4BE /* MessageKit in Frameworks */,
 				367535172793029B004129CB /* FirebaseDynamicLinks in Frameworks */,
 				367535092793029B004129CB /* FirebaseAppCheck in Frameworks */,
 				367535312793029B004129CB /* FirebaseStorage in Frameworks */,
+				36F9000227A2632F00BAF4BE /* SDWebImage in Frameworks */,
 				3675350D2793029B004129CB /* FirebaseAuth in Frameworks */,
 				367535352793029B004129CB /* FirebaseStorageSwift-Beta in Frameworks */,
 				367535232793029B004129CB /* FirebaseInAppMessaging-Beta in Frameworks */,
@@ -156,6 +167,7 @@
 				367535192793029B004129CB /* FirebaseFirestore in Frameworks */,
 				3675352B2793029B004129CB /* FirebaseMessaging in Frameworks */,
 				367535272793029B004129CB /* FirebaseInstallations in Frameworks */,
+				36F9000427A2632F00BAF4BE /* SDWebImageMapKit in Frameworks */,
 				367535212793029B004129CB /* FirebaseFunctionsCombine-Community in Frameworks */,
 				3675350B2793029B004129CB /* FirebaseAppDistribution-Beta in Frameworks */,
 				367535072793029B004129CB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -216,6 +228,15 @@
 			path = UserProfile;
 			sourceTree = "<group>";
 		};
+		3658753F27A4B3DD00D053A8 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */,
+				3658754027A4B43900D053A8 /* ChatTableViewCell.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
 		365EEB01278BD6FE008E4B8B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +272,7 @@
 			children = (
 				36FC23C0279FE6DD00CC7255 /* AuthManager.swift */,
 				36FC23BC279FD8E500CC7255 /* DatabaseManager.swift */,
+				3658753D27A4AD6D00D053A8 /* StorageManager.swift */,
 				365EEB06278BD784008E4B8B /* ModelControllers */,
 				365EEB05278BD77C008E4B8B /* ViewControllers */,
 			);
@@ -262,7 +284,7 @@
 			children = (
 				36FC23B1279F937700CC7255 /* Main Navigation */,
 				36FC23B0279F936B00CC7255 /* Feed */,
-				36F9FFF427A2188C00BAF4BE /* Ski Buddies */,
+				36F9FFF427A2188C00BAF4BE /* Buddies Chat */,
 				36FC23AF279F935500CC7255 /* Profile */,
 				36FC23AE279F933B00CC7255 /* OnBoarding */,
 			);
@@ -293,6 +315,7 @@
 		365EEB18278C14A4008E4B8B /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				3658753F27A4B3DD00D053A8 /* Conversation */,
 				3616D606279A2F0500D986ED /* UserProfile */,
 				36CF098E27976AD8006B0435 /* SkiUserProfiles */,
 			);
@@ -311,13 +334,13 @@
 			path = SkiUserProfiles;
 			sourceTree = "<group>";
 		};
-		36F9FFF427A2188C00BAF4BE /* Ski Buddies */ = {
+		36F9FFF427A2188C00BAF4BE /* Buddies Chat */ = {
 			isa = PBXGroup;
 			children = (
-				36F9FFF527A218F800BAF4BE /* Buddies.swift */,
-				36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */,
+				36F9FFF527A218F800BAF4BE /* BuddiesViewController.swift */,
+				36F9000727A26D4E00BAF4BE /* ChatViewController.swift */,
 			);
-			path = "Ski Buddies";
+			path = "Buddies Chat";
 			sourceTree = "<group>";
 		};
 		36FC23AE279F933B00CC7255 /* OnBoarding */ = {
@@ -446,6 +469,9 @@
 				367535302793029B004129CB /* FirebaseStorage */,
 				367535322793029B004129CB /* FirebaseStorageCombine-Community */,
 				367535342793029B004129CB /* FirebaseStorageSwift-Beta */,
+				36F9FFFE27A25A5000BAF4BE /* MessageKit */,
+				36F9000127A2632F00BAF4BE /* SDWebImage */,
+				36F9000327A2632F00BAF4BE /* SDWebImageMapKit */,
 			);
 			productName = SkiFinder;
 			productReference = 360DBB3A278A3E5600F41CBF /* SkiFinder.app */;
@@ -477,6 +503,8 @@
 			mainGroup = 360DBB31278A3E5600F41CBF;
 			packageReferences = (
 				367535012793029B004129CB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				36F9FFFD27A25A4F00BAF4BE /* XCRemoteSwiftPackageReference "MessageKit" */,
+				36F9000027A2632F00BAF4BE /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 360DBB3B278A3E5600F41CBF /* Products */;
 			projectDirPath = "";
@@ -550,6 +578,7 @@
 			files = (
 				36FC23D627A0C6D700CC7255 /* SkiProficiencyViewController.swift in Sources */,
 				36DFE1EE27925B0D00151478 /* FirebaseNetworkError.swift in Sources */,
+				36F9000827A26D4E00BAF4BE /* ChatViewController.swift in Sources */,
 				36FC23CB27A006E500CC7255 /* StartScreenViewController.swift in Sources */,
 				3628A98E278E96A300B4D813 /* SignInViewController.swift in Sources */,
 				36FC23BB279FC24800CC7255 /* VerifyPhoneNumberViewController.swift in Sources */,
@@ -559,6 +588,7 @@
 				36CF099027976B2D006B0435 /* SkiScheduleHeaderTableViewCell.swift in Sources */,
 				36CF098D27976ABD006B0435 /* SkiUserDetailsTableViewCell.swift in Sources */,
 				36FC23D427A0C6CD00CC7255 /* SkiPassLocationViewController.swift in Sources */,
+				3658753E27A4AD6D00D053A8 /* StorageManager.swift in Sources */,
 				36CF098B27976A71006B0435 /* SkiUserPhotoTableViewCell.swift in Sources */,
 				365EEB13278C0A3D008E4B8B /* AuthErrorCodeExtension.swift in Sources */,
 				369104A227976FAE00550EBF /* SkiUserTableViewController.swift in Sources */,
@@ -566,7 +596,7 @@
 				36FC23D027A0B0F100CC7255 /* FirstNameViewController.swift in Sources */,
 				36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */,
 				36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */,
-				36F9FFF627A218F800BAF4BE /* Buddies.swift in Sources */,
+				36F9FFF627A218F800BAF4BE /* BuddiesViewController.swift in Sources */,
 				3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */,
 				360DBB3E278A3E5600F41CBF /* AppDelegate.swift in Sources */,
 				3616D605279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift in Sources */,
@@ -577,6 +607,7 @@
 				36F9FFF327A20B5A00BAF4BE /* MainTabBarViewController.swift in Sources */,
 				36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */,
 				36FC23C1279FE6DE00CC7255 /* AuthManager.swift in Sources */,
+				3658754127A4B43900D053A8 /* ChatTableViewCell.swift in Sources */,
 				36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */,
 				365EEB0E278BEEF7008E4B8B /* SignUpViewController.swift in Sources */,
 				3628A9AC278FCF0A00B4D813 /* DateExtension.swift in Sources */,
@@ -829,6 +860,22 @@
 				minimumVersion = 8.9.0;
 			};
 		};
+		36F9000027A2632F00BAF4BE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		36F9FFFD27A25A4F00BAF4BE /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = exactVersion;
+				version = 3.7.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -961,6 +1008,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 367535012793029B004129CB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageSwift-Beta";
+		};
+		36F9000127A2632F00BAF4BE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36F9000027A2632F00BAF4BE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		36F9000327A2632F00BAF4BE /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36F9000027A2632F00BAF4BE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		36F9FFFE27A25A5000BAF4BE /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36F9FFFD27A25A4F00BAF4BE /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

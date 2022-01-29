@@ -388,7 +388,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-zD-cIW">
                                             <rect key="frame" x="67" y="12" width="280.5" height="20"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
                                                     <rect key="frame" x="0.0" y="0.0" width="111.5" height="20"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-Md-V71">
@@ -410,7 +410,7 @@
                                                                 <constraint firstItem="1vI-c7-RaJ" firstAttribute="centerX" secondItem="PEQ-Md-V71" secondAttribute="centerX" id="zlM-dm-Nwq"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
                                                             <rect key="frame" x="48" y="0.0" width="63.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -418,7 +418,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
                                                     <rect key="frame" x="141.5" y="0.0" width="139" height="20"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3J-lD-tlE">
@@ -440,7 +440,7 @@
                                                                 <constraint firstAttribute="width" secondItem="v3J-lD-tlE" secondAttribute="height" multiplier="1:1" id="Z3O-aq-ZuD"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
                                                             <rect key="frame" x="48" y="0.0" width="91" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -999,26 +999,94 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         <!--Chat-->
         <scene sceneID="cGd-2O-hlu">
             <objects>
-                <viewController title="Chat" id="I65-Wb-4o1" customClass="Buddies" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Chat" id="I65-Wb-4o1" customClass="BuddiesViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U51-7l-Sf0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-WG-SEY">
-                                <rect key="frame" x="0.0" y="200" width="414" height="613"/>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-WG-SEY">
+                                <rect key="frame" x="0.0" y="250" width="414" height="563"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="85" id="xFO-ep-6sS" customClass="ChatTableViewCell" customModule="SkiFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xFO-ep-6sS" id="cIN-RA-HvS">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="nGG-Vc-bc9">
+                                                    <rect key="frame" x="20" y="11" width="357.5" height="63"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-ix-Y9p">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="63"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="BbN-O8-ajh"/>
+                                                                <constraint firstAttribute="width" secondItem="hSV-ix-Y9p" secondAttribute="height" multiplier="1:1" id="Omy-XI-UZI"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="QDY-ib-yUy">
+                                                            <rect key="frame" x="104" y="0.0" width="96" height="63"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(First Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-Zt-jtD">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="28.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Message)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRY-YS-Jn2">
+                                                                    <rect key="frame" x="0.0" y="42.5" width="81" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Time Stamp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e69-iL-PcJ">
+                                                            <rect key="frame" x="254" y="0.0" width="103.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="QDY-ib-yUy" firstAttribute="centerY" secondItem="nGG-Vc-bc9" secondAttribute="centerY" id="rDO-AW-OSM"/>
+                                                        <constraint firstItem="hSV-ix-Y9p" firstAttribute="centerY" secondItem="nGG-Vc-bc9" secondAttribute="centerY" id="ze8-5Y-hn1"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nGG-Vc-bc9" firstAttribute="top" secondItem="cIN-RA-HvS" secondAttribute="topMargin" id="AYO-xn-MrY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nGG-Vc-bc9" secondAttribute="trailing" id="L6O-Ta-U4Z"/>
+                                                <constraint firstItem="nGG-Vc-bc9" firstAttribute="leading" secondItem="cIN-RA-HvS" secondAttribute="leadingMargin" id="Tj9-vR-v8M"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nGG-Vc-bc9" secondAttribute="bottom" id="wJS-dn-gDy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatImage" destination="hSV-ix-Y9p" id="tdK-GO-Ooe"/>
+                                            <outlet property="firstNameLabel" destination="AS4-Zt-jtD" id="Yzd-Pm-UID"/>
+                                            <outlet property="messageLabel" destination="pRY-YS-Jn2" id="6vV-Gq-0Yo"/>
+                                            <outlet property="timeStampLabel" destination="e69-iL-PcJ" id="bcW-bV-3KT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wuH-bZ-zoe"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ROm-WG-SEY" firstAttribute="top" secondItem="U51-7l-Sf0" secondAttribute="top" constant="200" id="4cQ-Am-hA5"/>
+                            <constraint firstItem="ROm-WG-SEY" firstAttribute="top" secondItem="U51-7l-Sf0" secondAttribute="top" constant="250" id="4cQ-Am-hA5"/>
                             <constraint firstItem="wuH-bZ-zoe" firstAttribute="bottom" secondItem="ROm-WG-SEY" secondAttribute="bottom" id="Odk-wD-DbR"/>
                             <constraint firstItem="wuH-bZ-zoe" firstAttribute="trailing" secondItem="ROm-WG-SEY" secondAttribute="trailing" id="b4H-pR-YGu"/>
                             <constraint firstItem="ROm-WG-SEY" firstAttribute="leading" secondItem="wuH-bZ-zoe" secondAttribute="leading" id="syZ-ig-z94"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Buddies" id="f6O-KX-8MT"/>
+                    <navigationItem key="navigationItem" title="Buddies" id="f6O-KX-8MT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="jQo-xt-T3P"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="conversationTableView" destination="ROm-WG-SEY" id="CiG-sF-GUb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRs-qS-UAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1032,61 +1100,27 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yym-aF-eI7">
-                                <rect key="frame" x="0.0" y="416.5" width="414" height="479.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cll-JZ-kFu">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCollectionVIewCell" id="kc0-ho-kcX" customClass="ProfileCollectionViewCell" customModule="SkiFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u1w-AX-kwO">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="760-X4-OuB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="760-X4-OuB" firstAttribute="top" secondItem="u1w-AX-kwO" secondAttribute="top" id="1I0-bX-4We"/>
-                                                <constraint firstItem="760-X4-OuB" firstAttribute="leading" secondItem="u1w-AX-kwO" secondAttribute="leading" id="Lyt-tK-Qux"/>
-                                                <constraint firstAttribute="trailing" secondItem="760-X4-OuB" secondAttribute="trailing" id="lfk-Ro-Ibg"/>
-                                                <constraint firstAttribute="bottom" secondItem="760-X4-OuB" secondAttribute="bottom" id="lgd-LZ-fZy"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="photoImageView" destination="760-X4-OuB" id="vob-Kl-R3b"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65X-g6-AC2">
-                                <rect key="frame" x="0.0" y="70" width="414" height="326.5"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="362.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ueK-H0-tgW">
-                                        <rect key="frame" x="103.5" y="20" width="207" height="207"/>
+                                        <rect key="frame" x="103.5" y="60" width="207" height="207"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ueK-H0-tgW" secondAttribute="height" multiplier="1:1" id="ctY-cN-nrH"/>
                                         </constraints>
                                     </imageView>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2Jz-20-H04">
-                                        <rect key="frame" x="197" y="113.5" width="20" height="20"/>
+                                        <rect key="frame" x="197" y="153.5" width="20" height="20"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Name, Age)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-fK-HxA">
-                                        <rect key="frame" x="147.5" y="247" width="119" height="26.5"/>
+                                        <rect key="frame" x="147.5" y="287" width="119" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7Hd-oD-Bct">
-                                        <rect key="frame" x="10.5" y="293.5" width="393" height="31"/>
+                                        <rect key="frame" x="10.5" y="333.5" width="393" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pu8-cb-D3Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="31"/>
@@ -1134,7 +1168,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                 <constraints>
                                     <constraint firstItem="2Jz-20-H04" firstAttribute="centerY" secondItem="ueK-H0-tgW" secondAttribute="centerY" id="4Gb-W5-4Ah"/>
                                     <constraint firstItem="ueK-H0-tgW" firstAttribute="width" secondItem="65X-g6-AC2" secondAttribute="width" multiplier="0.5" id="AEg-Yi-nfn"/>
-                                    <constraint firstItem="ueK-H0-tgW" firstAttribute="top" secondItem="65X-g6-AC2" secondAttribute="top" constant="20" id="GfQ-Ig-otI"/>
+                                    <constraint firstItem="ueK-H0-tgW" firstAttribute="top" secondItem="65X-g6-AC2" secondAttribute="top" constant="60" id="GfQ-Ig-otI"/>
                                     <constraint firstItem="TJE-fK-HxA" firstAttribute="top" secondItem="ueK-H0-tgW" secondAttribute="bottom" constant="20" id="Jlc-aB-vyK"/>
                                     <constraint firstItem="ueK-H0-tgW" firstAttribute="centerX" secondItem="65X-g6-AC2" secondAttribute="centerX" id="a9O-eq-BT3"/>
                                     <constraint firstItem="7Hd-oD-Bct" firstAttribute="top" secondItem="TJE-fK-HxA" secondAttribute="bottom" constant="20" id="eJr-tr-xK1"/>
@@ -1144,18 +1178,52 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <constraint firstItem="2Jz-20-H04" firstAttribute="centerX" secondItem="ueK-H0-tgW" secondAttribute="centerX" id="rfo-tr-gVu"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yym-aF-eI7">
+                                <rect key="frame" x="0.0" y="382.5" width="414" height="430.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cll-JZ-kFu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCollectionVIewCell" id="kc0-ho-kcX" customClass="ProfileCollectionViewCell" customModule="SkiFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u1w-AX-kwO">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="760-X4-OuB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="760-X4-OuB" firstAttribute="top" secondItem="u1w-AX-kwO" secondAttribute="top" id="1I0-bX-4We"/>
+                                                <constraint firstItem="760-X4-OuB" firstAttribute="leading" secondItem="u1w-AX-kwO" secondAttribute="leading" id="Lyt-tK-Qux"/>
+                                                <constraint firstAttribute="trailing" secondItem="760-X4-OuB" secondAttribute="trailing" id="lfk-Ro-Ibg"/>
+                                                <constraint firstAttribute="bottom" secondItem="760-X4-OuB" secondAttribute="bottom" id="lgd-LZ-fZy"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="760-X4-OuB" id="vob-Kl-R3b"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H7N-KP-5ZO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Yym-aF-eI7" secondAttribute="bottom" id="8Sg-8v-ap6"/>
+                            <constraint firstItem="H7N-KP-5ZO" firstAttribute="bottom" secondItem="Yym-aF-eI7" secondAttribute="bottom" id="8Sg-8v-ap6"/>
                             <constraint firstItem="Yym-aF-eI7" firstAttribute="leading" secondItem="H7N-KP-5ZO" secondAttribute="leading" id="9jd-jz-J8j"/>
                             <constraint firstItem="65X-g6-AC2" firstAttribute="trailing" secondItem="H7N-KP-5ZO" secondAttribute="trailing" id="EVb-7K-h6q"/>
                             <constraint firstItem="65X-g6-AC2" firstAttribute="leading" secondItem="H7N-KP-5ZO" secondAttribute="leading" id="EXV-wx-VGi"/>
                             <constraint firstItem="Yym-aF-eI7" firstAttribute="trailing" secondItem="H7N-KP-5ZO" secondAttribute="trailing" id="Vtu-56-aSf"/>
-                            <constraint firstItem="65X-g6-AC2" firstAttribute="top" secondItem="diD-Pg-csH" secondAttribute="top" constant="70" id="he3-RV-ftr"/>
-                            <constraint firstItem="Yym-aF-eI7" firstAttribute="top" secondItem="65X-g6-AC2" secondAttribute="bottom" constant="20" id="mm3-tw-qMd"/>
-                            <constraint firstItem="65X-g6-AC2" firstAttribute="height" secondItem="H7N-KP-5ZO" secondAttribute="height" multiplier="0.45" id="yQy-8r-iuQ"/>
+                            <constraint firstItem="65X-g6-AC2" firstAttribute="top" secondItem="diD-Pg-csH" secondAttribute="top" constant="20" symbolic="YES" id="he3-RV-ftr"/>
+                            <constraint firstItem="Yym-aF-eI7" firstAttribute="top" secondItem="65X-g6-AC2" secondAttribute="bottom" id="mm3-tw-qMd"/>
+                            <constraint firstItem="65X-g6-AC2" firstAttribute="height" secondItem="H7N-KP-5ZO" secondAttribute="height" multiplier="0.5" id="yQy-8r-iuQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IH3-Vg-a2L"/>
@@ -1168,7 +1236,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HX3-lt-oco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2845" y="173"/>
+            <point key="canvasLocation" x="2844.9275362318845" y="172.76785714285714"/>
         </scene>
         <!--Edit Ski Dates View Controller-->
         <scene sceneID="7uU-9P-0iW">
