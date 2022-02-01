@@ -23,17 +23,16 @@ struct Sender: SenderType {
 
 class ChatViewController: MessagesViewController {
     // MARK: - Properties
-    public var otherUserId: String
+    public var otherUser: String
     public var isNewConversation = false
     
     private var messages = [ChatMessage]()
     private var dummySender = Sender(photoURL: "", senderId: "1", displayName: "Wario")
     
 
-    init(with id: String) {
-        self.otherUserId = id
+    init(with user: User) {
+        self.otherUser = user.uid
         super.init(nibName: nil, bundle: nil)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -47,7 +46,6 @@ class ChatViewController: MessagesViewController {
         
         messages.append(ChatMessage(sender: dummySender, messageId: "1", sentDate: Date(), kind: .text("Hey Waluigi! I forgot the time we are going to Mario's to mess with him. Could you remind me the timw?")))
         messages.append(ChatMessage(sender: dummySender, messageId: "2", sentDate: Date(), kind: .text("time*")))
-        view.backgroundColor = .purple
     }
 
     // MARK: - Methods

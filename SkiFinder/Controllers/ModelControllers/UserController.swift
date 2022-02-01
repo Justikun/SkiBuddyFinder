@@ -48,6 +48,21 @@ class UserController {
         }
     }
     
+    /// Fetch user by uid
+    func fetchUser(by uid: String, completion: @escaping(User?) -> Void) {
+        let userRef = db.collection(Constants.Firebase.User.usersCollectionKey)
+        
+        userRef.whereField(Constants.Firebase.User.uidKey, isEqualTo: uid).getDocuments { snapshot, error in
+            if let error = error {
+                print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
+                return completion(nil)
+            } else if let snapshot = snapshot {
+                let user = try? snapshot.documents.first?.data(as: User.self)
+                return completion(user)
+            }
+        }
+    }
+    
     /// Fetch currently signed in user
     func fetchCurrentUser(completion: @escaping(Bool) -> Void) {
         if let currentUser = Auth.auth().currentUser {
@@ -107,7 +122,7 @@ class UserController {
                 completion(false)
             } else {
                 guard let snapshot = snapshot,
-                   let documentID = snapshot.documents.first?.documentID else { return completion(false) }
+                      let documentID = snapshot.documents.first?.documentID else { return completion(false) }
                 
                 // Reference to the document (User) to update
                 let ref = self.db.collection(Constants.Firebase.User.usersCollectionKey).document(documentID)
@@ -125,9 +140,6 @@ class UserController {
     
     /// Updates user information on Firestore
     func updateUser(_ user: User, completion: @escaping (Bool) -> Void) {
-        // TODO: - temp line
-        user.buddies = [Buddy(buddyId: "b3r0uwn9kyWsp4ioBAaL9fY2qA32", didStartConversation: false)]
-        
         // Searching Firestore for a uid match of the user we want to update
         db.collection(Constants.Firebase.User.usersCollectionKey).whereField(Constants.Firebase.User.uidKey, isEqualTo: user.uid).getDocuments { snapshot, error in
             
@@ -153,14 +165,14 @@ class UserController {
     }
     
         
-    /// Returns an array of the current user's buddiestemp
-    func getBuddies(completion: @escaping (Result<[User], FirebaseNetworkError>) -> Void) {
+    /// Returns an array of the current user's invites
+    func getSkiInviters(completion: @escaping (Result<[User], FirebaseNetworkError>) -> Void) {
         guard let user = user else { return completion(.failure(.noSignedInUser))}
         
         // Gets all the uids for each buddy the current user hasn't started a converation with
-        let buddyUids: [String] = user.buddies.compactMap { buddy in
-            if !buddy.didStartConversation {
-                return buddy.buddyId
+        let buddyUids: [String] = user.skiInvites.compactMap { skiInvite in
+            if !skiInvite.didStartConversation {
+                return skiInvite.inviterUid
             }
             return nil
         }
@@ -183,6 +195,10 @@ class UserController {
                 }
             }
         }
+    }
+    
+    func addSkiInivite(inviterUid: String, inviteeUid: String, date: Date) {
+
     }
     
     

@@ -23,6 +23,8 @@
 		363C47032798B21E005DB518 /* SkiUserCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C47022798B21E005DB518 /* SkiUserCalendarTableViewCell.swift */; };
 		3658753E27A4AD6D00D053A8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658753D27A4AD6D00D053A8 /* StorageManager.swift */; };
 		3658754127A4B43900D053A8 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754027A4B43900D053A8 /* ChatTableViewCell.swift */; };
+		3658754327A76A6500D053A8 /* InvitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754227A76A6500D053A8 /* InvitesTableViewController.swift */; };
+		3658754527A8791B00D053A8 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754427A8791A00D053A8 /* InviteTableViewCell.swift */; };
 		365EEB08278BDA1F008E4B8B /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */; };
 		365EEB0A278BDA81008E4B8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB09278BDA81008E4B8B /* User.swift */; };
 		365EEB0C278BE15E008E4B8B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB0B278BE15E008E4B8B /* UserController.swift */; };
@@ -69,8 +71,7 @@
 		36F9000827A26D4E00BAF4BE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9000727A26D4E00BAF4BE /* ChatViewController.swift */; };
 		36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */; };
 		36F9FFF327A20B5A00BAF4BE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */; };
-		36F9FFF627A218F800BAF4BE /* BuddiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF527A218F800BAF4BE /* BuddiesViewController.swift */; };
-		36F9FFF827A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */; };
+		36F9FFF627A218F800BAF4BE /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF527A218F800BAF4BE /* ConversationsViewController.swift */; };
 		36F9FFFF27A25A5000BAF4BE /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36F9FFFE27A25A5000BAF4BE /* MessageKit */; };
 		36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */; };
 		36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */; };
@@ -107,6 +108,8 @@
 		363C47022798B21E005DB518 /* SkiUserCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiUserCalendarTableViewCell.swift; sourceTree = "<group>"; };
 		3658753D27A4AD6D00D053A8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		3658754027A4B43900D053A8 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		3658754227A76A6500D053A8 /* InvitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesTableViewController.swift; sourceTree = "<group>"; };
+		3658754427A8791A00D053A8 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
 		365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		365EEB09278BDA81008E4B8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		365EEB0B278BE15E008E4B8B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -125,8 +128,7 @@
 		36F9000727A26D4E00BAF4BE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		36F9FFF027A1E4BF00BAF4BE /* MobileInUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileInUse.swift; sourceTree = "<group>"; };
 		36F9FFF227A20B5A00BAF4BE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		36F9FFF527A218F800BAF4BE /* BuddiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddiesViewController.swift; sourceTree = "<group>"; };
-		36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBuddyCollectionViewCell.swift; sourceTree = "<group>"; };
+		36F9FFF527A218F800BAF4BE /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		36FC23AD279F841100CC7255 /* SkiFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkiFinder.entitlements; sourceTree = "<group>"; };
 		36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -228,13 +230,13 @@
 			path = UserProfile;
 			sourceTree = "<group>";
 		};
-		3658753F27A4B3DD00D053A8 /* Conversation */ = {
+		3658753F27A4B3DD00D053A8 /* Conversations */ = {
 			isa = PBXGroup;
 			children = (
-				36F9FFF727A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift */,
 				3658754027A4B43900D053A8 /* ChatTableViewCell.swift */,
+				3658754427A8791A00D053A8 /* InviteTableViewCell.swift */,
 			);
-			path = Conversation;
+			path = Conversations;
 			sourceTree = "<group>";
 		};
 		365EEB01278BD6FE008E4B8B /* Resources */ = {
@@ -315,7 +317,7 @@
 		365EEB18278C14A4008E4B8B /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				3658753F27A4B3DD00D053A8 /* Conversation */,
+				3658753F27A4B3DD00D053A8 /* Conversations */,
 				3616D606279A2F0500D986ED /* UserProfile */,
 				36CF098E27976AD8006B0435 /* SkiUserProfiles */,
 			);
@@ -337,8 +339,9 @@
 		36F9FFF427A2188C00BAF4BE /* Buddies Chat */ = {
 			isa = PBXGroup;
 			children = (
-				36F9FFF527A218F800BAF4BE /* BuddiesViewController.swift */,
+				36F9FFF527A218F800BAF4BE /* ConversationsViewController.swift */,
 				36F9000727A26D4E00BAF4BE /* ChatViewController.swift */,
+				3658754227A76A6500D053A8 /* InvitesTableViewController.swift */,
 			);
 			path = "Buddies Chat";
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				36FC23CB27A006E500CC7255 /* StartScreenViewController.swift in Sources */,
 				3628A98E278E96A300B4D813 /* SignInViewController.swift in Sources */,
 				36FC23BB279FC24800CC7255 /* VerifyPhoneNumberViewController.swift in Sources */,
+				3658754527A8791B00D053A8 /* InviteTableViewCell.swift in Sources */,
 				3616D608279A98C500D986ED /* EditSkiDatesViewController.swift in Sources */,
 				365EEB0A278BDA81008E4B8B /* User.swift in Sources */,
 				367D742D278D67C1008D7007 /* Constants.swift in Sources */,
@@ -596,13 +600,14 @@
 				36FC23D027A0B0F100CC7255 /* FirstNameViewController.swift in Sources */,
 				36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */,
 				36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */,
-				36F9FFF627A218F800BAF4BE /* BuddiesViewController.swift in Sources */,
+				36F9FFF627A218F800BAF4BE /* ConversationsViewController.swift in Sources */,
 				3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */,
 				360DBB3E278A3E5600F41CBF /* AppDelegate.swift in Sources */,
 				3616D605279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift in Sources */,
 				365EEB0C278BE15E008E4B8B /* UserController.swift in Sources */,
 				36FC23D227A0B17600CC7255 /* BirthDateViewController.swift in Sources */,
 				36FC23BF279FDD5B00CC7255 /* LoginSignUpNavViewController.swift in Sources */,
+				3658754327A76A6500D053A8 /* InvitesTableViewController.swift in Sources */,
 				365EEB17278C1483008E4B8B /* UserTableViewCell.swift in Sources */,
 				36F9FFF327A20B5A00BAF4BE /* MainTabBarViewController.swift in Sources */,
 				36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */,
@@ -619,7 +624,6 @@
 				36FC23BD279FD8E500CC7255 /* DatabaseManager.swift in Sources */,
 				3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */,
 				3628A99C278EBAAC00B4D813 /* ProfileCollectionViewController.swift in Sources */,
-				36F9FFF827A21C9800BAF4BE /* NewBuddyCollectionViewCell.swift in Sources */,
 				360DBB40278A3E5600F41CBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

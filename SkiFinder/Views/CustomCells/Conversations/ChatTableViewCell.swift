@@ -13,12 +13,14 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
+    @IBOutlet weak var notificationDot: UIView!
     
     
     // MARK: - Lifecycles
     override func awakeFromNib() {
         super.awakeFromNib()
         chatImage.setCircleShape()
+        notificationDot.setCircleShape()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

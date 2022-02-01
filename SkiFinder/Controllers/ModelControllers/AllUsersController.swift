@@ -23,24 +23,39 @@ class AllUsersController {
     // MARK: - Methods
     
     func getUsers(completion: @escaping(Bool) -> Void) {
-        db.collection(Constants.Firebase.User.usersCollectionKey).getDocuments { snapshot, error in
+        db.collection(Constants.Firebase.User.usersCollectionKey).getDocuments { [weak self] snapshot, error in
+            guard let self = self else { return }
+            
             if let error = error {
                 print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
                 return completion(false)
             }
             
-//            TODO: - Filter out the current user ( This way you don't see yourself)
             if let snapshot = snapshot {
                 let users = snapshot.documents.compactMap {
                     return try? $0.data(as: User.self)
                 }
                 
-                self.users = users
+                // Removes own profile out of feed.
+                self.users = self.filterSelfOut(of: users)
                 return completion(true)
             }
         }
     }
     
+    private func filterSelfOut(of users: [User]) -> [User] {
+        guard let currentUser = AuthManager.shared.auth.currentUser else { return [] }
+        
+        let filteredUsers: [User] = users.filter { user in
+            if user.uid != currentUser.uid {
+                print(user.firstName)
+                return true
+            }
+            return false
+        }
+        
+        return filteredUsers
+    }
     
     
     

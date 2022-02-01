@@ -18,24 +18,25 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AllUsersController.shared.getUsers { success in
+        AllUsersController.shared.getUsers {[weak self] success in
+            guard let self = self else { return }
+            
             if success {
-                self.updateViews()
+                DispatchQueue.main.async {
+                    self.updateViews()
+                }
             }
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if let handler = handler {
-            Auth.auth().removeStateDidChangeListener(handler)
-        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         handler = Auth.auth().addStateDidChangeListener({ auth, user in
             if user != nil {
-                print("Currently In")
-                self.getCurrentUser()
+                print("Currently In", UserController.shared.user?.firstName)
             }
         })
     }
@@ -55,17 +56,18 @@ class FeedTableViewController: UITableViewController {
         do {
             try Auth.auth().signOut()
             print("Signed out")
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBoardingNavigationVC") as? LoginSignUpNavViewController
+            self.view.window?.rootViewController = vc
+            self.view.window?.makeKeyAndVisible()
         } catch {
             print("Unable to sign out")
         }
     }
-    
-    func getCurrentUser() {
-    }
 
     // MARK: - Table view data source
+    // Populates the feed
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return AllUsersController.shared.users.count
     }
     

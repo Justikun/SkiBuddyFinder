@@ -39,6 +39,8 @@ class SkiUserSkiDatesTableViewCell: UITableViewCell {
     // MARK: - Methods
     func setSkiDates() {
         guard let user = user else { return }
+        self.willSkiDateStrings = []
+        self.maybeSkiDateStrings = []
         
         user.skiDates.willSkiDates.forEach { date in
             let dateStr = DateFormatter().formatter.string(from: date)
@@ -51,11 +53,36 @@ class SkiUserSkiDatesTableViewCell: UITableViewCell {
         }
     }
     
-    func presentSkiInvitationAlert() {
+    func presentSkiInvitationAlert(inviteDate: Date) {
         guard let user = user,
+              let currentUser = UserController.shared.user,
               let parentVC = parentVC else { return }
         
-        let okAction = UIAlertAction(title: "Send", style: .default)
+        let okAction = UIAlertAction(title: "Send", style: .default) { _ in
+            var hasExistingInvite = false
+            
+            // Add to existing invite if it exists
+            user.skiInvites.forEach {
+                if $0.inviterUid == currentUser.uid {
+                    hasExistingInvite = true
+                    $0.inviteDate = inviteDate
+                }
+            }
+            
+            // Create new invite if existing one doesn't exist
+            if !hasExistingInvite {
+                let newSkiInvite = SkiInvites(inviterUid: currentUser.uid, inviterFirstName: currentUser.firstName, inviterPhotoUrl: currentUser.profilePhotoURL ?? "", inviteDate: inviteDate)
+                user.skiInvites.append(newSkiInvite)
+            }
+            
+            UserController.shared.updateUser(user) { success in
+                print("Did update ski invites")
+                DispatchQueue.main.async {
+                    self.user = user
+                }
+            }
+            
+        }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
@@ -64,7 +91,7 @@ class SkiUserSkiDatesTableViewCell: UITableViewCell {
         requestAlert.addAction(okAction)
         requestAlert.addAction(cancelAction)
 
-        parentVC.present(requestAlert, animated: true, completion: nil)
+        parentVC.present(requestAlert, animated: true)
     }
 }
 
@@ -90,14 +117,9 @@ extension SkiUserSkiDatesTableViewCell: FSCalendarDelegate, FSCalendarDataSource
     // Present UIAlert when selecting 'active' date
     func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
         let dateStr = DateFormatter().formatter.string(from: date)
+        print("__________________ Date to add: \(dateStr)")
         
-        if willSkiDateStrings.contains(dateStr) {
-            presentSkiInvitationAlert()
-        }
-
-        if maybeSkiDateStrings.contains(dateStr) {
-            presentSkiInvitationAlert()
-        }
+        presentSkiInvitationAlert(inviteDate: date)
         
         calendar.select(date)
     }

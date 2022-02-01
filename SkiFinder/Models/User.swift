@@ -21,13 +21,12 @@ class User: Identifiable, Codable {
     var bio: String?
     var skiStyleTags: [String]
     var skiDates: SkiDates
-    var skiInviteDates: [SkiInviteDates]
+    var skiInvites: [SkiInvites]
     var skiTypes: SkiTypes
     var profilePhotoURL: String?
     var photoURLS: [String]
     var onboardingComplete: Bool
     
-    var buddies: [Buddy]
     var chats: [Chat]
     
     enum CodingKeys: String, CodingKey {
@@ -40,13 +39,12 @@ class User: Identifiable, Codable {
         case bio = "bio"
         case skiStyleTags = "ski_style_tags"
         case skiDates = "ski_dates"
-        case skiInviteDates = "ski_invite_dates"
+        case skiInvites = "ski_invites"
         case skiTypes = "ski_types"
         case profilePhotoURL = "profile_photo_url"
         case photoURLS = "photo_urls"
         case onboardingComplete = "onboarding_complete"
-        
-        case buddies = "buddies"
+
         case chats = "chats"
     }
     
@@ -60,13 +58,12 @@ class User: Identifiable, Codable {
          bio: String = "",
          skiStyleTags: [String] = [],
          skiDates: SkiDates = SkiDates() ,
-         skiInviteDates: [SkiInviteDates] = [],
+         skiInvites: [SkiInvites] = [],
          skiTypes: SkiTypes = SkiTypes(ski: false, snowboard: false),
          profilePhotoURL: String = "",
          photoURLS: [String] = [],
          onboardingComplete: Bool = false,
-         
-         buddies: [Buddy] = [],
+
          chats: [Chat] = []
     ) {
         self.uid = uid
@@ -78,29 +75,13 @@ class User: Identifiable, Codable {
         self.bio = bio
         self.skiStyleTags = skiStyleTags
         self.skiDates = skiDates
-        self.skiInviteDates = skiInviteDates
+        self.skiInvites = skiInvites
         self.skiTypes = skiTypes
         self.profilePhotoURL = profilePhotoURL
         self.photoURLS = photoURLS
         self.onboardingComplete = onboardingComplete
-        
-        self.buddies = buddies
-        self.chats = chats
-    }
-}
 
-class Buddy: Codable {
-    let buddyId: String
-    var didStartConversation: Bool
-    
-    enum CodingKeys: String, CodingKey {
-        case buddyId = "buddy_id"
-        case didStartConversation = "did_start_conversation"
-    }
-    
-    init(buddyId: String, didStartConversation: Bool = false) {
-        self.buddyId = buddyId
-        self.didStartConversation = didStartConversation
+        self.chats = chats
     }
 }
 
@@ -119,15 +100,27 @@ class SkiDates: Codable {
     }
 }
 
-struct SkiInviteDates: Codable {
-    var inviterID: String
-    var willSkiDates: [Date]
-    var maybeSkiDates: [Date]
+class SkiInvites: Codable {
+    var inviterUid: String
+    var inviterFirstName: String
+    var inviterPhotoURL: String
+    var didStartConversation: Bool
+    var inviteDate: Date
     
     enum CodingKeys: String, CodingKey {
-        case inviterID = "inviter_id"
-        case willSkiDates = "will_ski_dates"
-        case maybeSkiDates = "maybe_ski_dates"
+        case inviterUid = "inviter_uid"
+        case inviterFirstName = "inviter_first_name"
+        case didStartConversation = "did_start_conversation"
+        case inviterPhotoURL = "inviter_photo_url"
+        case inviteDate = "invite_date"
+    }
+
+    init(inviterUid: String, inviterFirstName: String, didStartConversation: Bool = false, inviterPhotoUrl: String, inviteDate: Date) {
+        self.inviterUid = inviterUid
+        self.inviterFirstName = inviterFirstName
+        self.didStartConversation = didStartConversation
+        self.inviterPhotoURL = inviterPhotoUrl
+        self.inviteDate = inviteDate
     }
 }
 
