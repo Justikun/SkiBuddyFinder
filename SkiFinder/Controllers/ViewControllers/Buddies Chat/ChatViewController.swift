@@ -54,10 +54,24 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMessages()
+        markMessageRead()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        messagesCollectionView.scrollToLastItem()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        guard let user = UserController.shared.user else { return }
+        user.chats.forEach { chat in
+            if chat.conversationId == conversationId {
+                chat.latestMessage?.isRead = true
+            }
+            
+            UserController.shared.updateUser(user) { _ in }
+        }
     }
     
     // MARK: - Methods
@@ -70,10 +84,6 @@ class ChatViewController: MessagesViewController {
                 
                 DispatchQueue.main.async {
                     self?.messagesCollectionView.reloadDataAndKeepOffset()
-                    
-                    if shouldScrollToBottom {
-                        self?.messagesCollectionView.scrollToBottom()
-                    }
                     self?.messageInputBar.inputTextView.becomeFirstResponder()
                 }
             case .failure(let error):
@@ -88,6 +98,18 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesDisplayDelegate = self
         messageInputBar.delegate = self
     }
+    
+    private func markMessageRead() {
+        guard let user = UserController.shared.user else { return }
+        
+        user.chats.forEach { chat in
+            if chat.conversationId == conversationId {
+                chat.latestMessage?.isRead = true
+            }
+        }
+        UserController.shared.updateUser(user) { _ in }
+    }
+    
 } // End of class
 
 extension ChatViewController: InputBarAccessoryViewDelegate {
@@ -103,10 +125,9 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
                                    sentDate: Date(),
                                    kind: .text(text))
         
-        DatabaseManager.shared.sendMessage(to: conversationId, message: message) { success in
+        DatabaseManager.shared.sendMessage(to: conversationId, message: message, otherUserUid: otherUserUid) { success in
             if success {
                 inputBar.inputTextView.text = ""
-                print("Sent Message: \(text)")
             } else {
                 print("failed to send")
             }

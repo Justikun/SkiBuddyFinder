@@ -41,7 +41,7 @@ class UserController {
         let db = Firestore.firestore()
         
         do {
-            try _ = db.collection(Constants.Firebase.User.usersCollectionKey).document(user.uid).setData(from: user)
+            try db.collection(Constants.Firebase.User.usersCollectionKey).document(user.uid).setData(from: user)
             completion(nil)
         } catch let error {
             print("Error writing website to Firestore: \(error)")

@@ -126,6 +126,7 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
                 cell.notificationDot.isHidden = true
             } else {
                 cell.notificationDot.isHidden = false
+                cell.notificationDot.backgroundColor = UIColor(red: 243/255, green: 92/255, blue: 81/255, alpha: 1)
             }
         }
         

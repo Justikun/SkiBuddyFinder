@@ -200,9 +200,7 @@ extension DatabaseManager {
 //        var displayName: String
 //    }
     /// Sends a message with target conversation and message
-    public func sendMessage(to conversation: String, message: ChatMessage, completion: @escaping(Bool) -> Void) {
-        
-        
+    public func sendMessage(to conversation: String, message: ChatMessage, otherUserUid: String, completion: @escaping(Bool) -> Void) {
         var content = ""
         
         switch message.kind {
@@ -228,6 +226,41 @@ extension DatabaseManager {
             break
         }
         
+        // Update latest message for current User
+        let usersRef = db.collection(Constants.Firebase.User.usersCollectionKey)
+        guard let user = UserController.shared.user else { return completion(false) }
+        user.chats.forEach { chat in
+            if chat.conversationId == conversation {
+                chat.latestMessage = LatestMessage(date: message.sentDate, isRead: true, message: content)
+            }
+        }
+        
+        try? usersRef.document(user.uid).setData(from: user)
+        
+        // Update latest message for recipient User
+        usersRef.document(otherUserUid).getDocument { document, error in
+            guard let document = document else {
+                print("Error fetching documents: \(error!)")
+                return completion(false)
+            }
+            
+            do {
+                guard let otherUser = try document.data(as: User.self) else { return completion(false) }
+                otherUser.chats.forEach { chat in
+                    if chat.conversationId == conversation {
+                        chat.latestMessage = LatestMessage(date: message.sentDate, isRead: false, message: content)
+                    }
+                }
+                
+                try? usersRef.document(otherUserUid).setData(from: otherUser)
+                
+            } catch let error {
+                print("Error decoding: \(error.localizedDescription)")
+                return completion(false)
+            }
+        }
+        
+        // Update conversations
         let conversationRef = db.collection("conversations").document(conversation)
         
         conversationRef.updateData(["messages" : FieldValue.arrayUnion([[
@@ -239,5 +272,6 @@ extension DatabaseManager {
             "type" : "text",
             "sent_date" : message.sentDate
         ]])])
+        completion(true)
     }
 } // End of extension
