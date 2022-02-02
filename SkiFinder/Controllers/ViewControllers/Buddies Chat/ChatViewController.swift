@@ -40,8 +40,9 @@ class ChatViewController: MessagesViewController {
         self.otherUserUid = userUid
         self.conversationId = id
         super.init(nibName: nil, bundle: nil)
+        
         if let conversationId = conversationId {
-            listenForMessages(id: conversationId)
+            listenForMessages(id: conversationId, shouldScrollToBottom: true)
         }
     }
     
@@ -55,7 +56,12 @@ class ChatViewController: MessagesViewController {
         setupMessages()
     }
     
-    private func listenForMessages(id: String) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    // MARK: - Methods
+    private func listenForMessages(id: String, shouldScrollToBottom: Bool) {
         DatabaseManager.shared.getAllMessagesForConversation(with: id) { [weak self] result in
             switch result {
             case .success(let messages):
@@ -64,6 +70,11 @@ class ChatViewController: MessagesViewController {
                 
                 DispatchQueue.main.async {
                     self?.messagesCollectionView.reloadDataAndKeepOffset()
+                    
+                    if shouldScrollToBottom {
+                        self?.messagesCollectionView.scrollToBottom()
+                    }
+                    self?.messageInputBar.inputTextView.becomeFirstResponder()
                 }
             case .failure(let error):
                 print("Failed to get messages: \(error)")
@@ -71,17 +82,11 @@ class ChatViewController: MessagesViewController {
         }
     }
 
-    // MARK: - Methods
     private func setupMessages() {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         messageInputBar.delegate = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        messageInputBar.inputTextView.becomeFirstResponder()
     }
 } // End of class
 
@@ -98,9 +103,9 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
                                    sentDate: Date(),
                                    kind: .text(text))
         
-        
-        DatabaseManager.shared.sendMessage(to: conversationId, message: message) {[weak self] success in
+        DatabaseManager.shared.sendMessage(to: conversationId, message: message) { success in
             if success {
+                inputBar.inputTextView.text = ""
                 print("Sent Message: \(text)")
             } else {
                 print("failed to send")
@@ -114,8 +119,6 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
         
         let dateString = DateFormatter().formatDateForId.string(from: Date())
         let newIdentifier = "\(otherUserUid)_\(user.uid)_\(dateString)"
-        
-        print("Created message id: \(newIdentifier)")
         
         return newIdentifier
     }

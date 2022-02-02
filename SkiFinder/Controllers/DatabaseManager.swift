@@ -70,6 +70,32 @@ extension DatabaseManager {
         // Adding conversation in conversation collection
         let newConversation = Conversation(conversationId: conversationId, messages: [])
         
+        // Update recipient chat entry
+        usersRef.document(otherUid).getDocument { document, error in
+            guard let document = document else {
+                print("Error fetching documents: \(error!)")
+                return completion(false)
+            }
+            
+            do {
+                guard let otherUser = try document.data(as: User.self) else { return completion(false) }
+                let chat = Chat(conversationId: conversationId, otherUserfirstName: user.firstName, otherUserUid: user.uid, latestMessage: nil)
+                
+                otherUser.chats.append(chat)
+                UserController.shared.updateUser(otherUser) { success in
+                    guard success else {
+                        print("Failed to update other user conversation")
+                        return completion(false)
+                    }
+                }
+                
+            } catch let error {
+                print("Error decoding: \(error.localizedDescription)")
+                return completion(false)
+            }
+        }
+        
+        // Update current user chat entry
         do {
             try conversationsRef.document(conversationId).setData(from: newConversation)
             try usersRef.document(user.uid).setData(from: user)

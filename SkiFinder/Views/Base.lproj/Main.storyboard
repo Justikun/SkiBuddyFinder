@@ -984,8 +984,6 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LQV-3h-w8r">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="I65-Wb-4o1" kind="relationship" relationship="rootViewController" id="2VJ-9Z-YFn"/>
@@ -1005,7 +1003,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         <subviews>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-WG-SEY">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.7676305175" green="0.87595552210000005" blue="0.9882522225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="93" id="xFO-ep-6sS" customClass="ChatTableViewCell" customModule="SkiFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="93"/>

@@ -35,9 +35,7 @@ class FeedTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         handler = Auth.auth().addStateDidChangeListener({ auth, user in
-            if user != nil {
-                print("Currently In", UserController.shared.user?.firstName)
-            }
+
         })
     }
     // MARK: - Actions
