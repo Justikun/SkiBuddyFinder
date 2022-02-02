@@ -136,15 +136,24 @@ struct SkiTypes: Codable {
 
 // ------CONVERSATION------
 
-struct Chat: Codable {
+class Chat: Codable {
     var conversationId: String
     var otherUserUid: String
-    var latestMessage: LatestMessage
+    var otherUserfirstName: String
+    var latestMessage: LatestMessage?
     
     enum CodingKeys: String, CodingKey {
         case conversationId = "conversation_id"
+        case otherUserfirstName = "other_user_first_name"
         case otherUserUid = "other_user_uid"
         case latestMessage = "latestMessage"
+    }
+    
+    init(conversationId: String, otherUserfirstName: String, otherUserUid: String, latestMessage: LatestMessage?) {
+        self.conversationId = conversationId
+        self.otherUserfirstName = otherUserfirstName
+        self.otherUserUid = otherUserUid
+        self.latestMessage = latestMessage
     }
 }
 
@@ -158,9 +167,15 @@ class LatestMessage: Codable {
         case isRead = "is_read"
         case message = "message"
     }
+    
+    init(date: Date, isRead: Bool, message: String) {
+        self.date = date
+        self.isRead = isRead
+        self.message = message
+    }
 }
 
-struct Conversation: Codable{
+class Conversation: Codable {
     var conversationId: String
     var messages: [Message]
     
@@ -169,20 +184,39 @@ struct Conversation: Codable{
         case messages = "messages"
     }
     
+    init(conversationId: String, messages: [Message]) {
+        self.conversationId = conversationId
+        self.messages = messages
+    }
+    
 }
 
-struct Message: Codable {
+class Message: Codable {
     var messageId: String
     var senderUid: String
+    var senderFirstName: String
     var content: String
     var date: Date
     var isRead: Bool
+    var type: String
     
     enum CodingKeys: String, CodingKey {
         case messageId = "message_id"
         case senderUid = "sender_uid"
+        case senderFirstName = "sender_first_name"
         case content = "content"
-        case date = "date"
+        case date = "sent_date"
         case isRead = "is_read"
+        case type = "type"
+    }
+    
+    init(messageId: String, senderUid: String, senderFirstName: String, content: String, date: Date, isRead: Bool, type: String) {
+        self.messageId = messageId
+        self.senderUid = senderUid
+        self.senderFirstName = senderFirstName
+        self.content = content
+        self.date = date
+        self.isRead = isRead
+        self.type = type
     }
 }

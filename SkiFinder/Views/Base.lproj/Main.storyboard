@@ -981,8 +981,8 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
             <objects>
                 <navigationController id="5g3-Ud-Mfy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="message" catalog="system" id="riE-va-av4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQV-3h-w8r">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LQV-3h-w8r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1007,31 +1007,31 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.7676305175" green="0.87595552210000005" blue="0.9882522225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="79" id="xFO-ep-6sS" customClass="ChatTableViewCell" customModule="SkiFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="79"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="93" id="xFO-ep-6sS" customClass="ChatTableViewCell" customModule="SkiFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xFO-ep-6sS" id="cIN-RA-HvS">
-                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSV-ix-Y9p">
-                                                    <rect key="frame" x="32" y="14.5" width="50" height="50"/>
+                                                    <rect key="frame" x="32" y="19" width="50" height="55"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hSV-ix-Y9p" secondAttribute="height" multiplier="1:1" id="eFu-t9-FbU"/>
                                                         <constraint firstAttribute="width" constant="50" id="rdR-IS-9S9"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QDY-ib-yUy">
-                                                    <rect key="frame" x="102" y="11" width="94.5" height="57"/>
+                                                    <rect key="frame" x="102" y="20" width="114.5" height="53"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(First Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-Zt-jtD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="94.5" height="26"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRY-YS-Jn2">
-                                                            <rect key="frame" x="0.0" y="31" width="94.5" height="26"/>
+                                                            <rect key="frame" x="0.0" y="29" width="114.5" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1044,9 +1044,9 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPE-2G-QI4">
-                                                    <rect key="frame" x="10" y="33.5" width="12" height="12"/>
-                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPE-2G-QI4">
+                                                    <rect key="frame" x="10" y="40.5" width="12" height="12"/>
+                                                    <color key="backgroundColor" red="1" green="0.37574133213471161" blue="0.38353724834740299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="12" id="YJs-Nn-ioC"/>
                                                         <constraint firstAttribute="width" secondItem="xPE-2G-QI4" secondAttribute="height" multiplier="1:1" id="s3e-mU-QMa"/>
@@ -1054,16 +1054,16 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="QDY-ib-yUy" secondAttribute="bottom" id="0x0-Ho-vrT"/>
                                                 <constraint firstItem="QDY-ib-yUy" firstAttribute="leading" secondItem="hSV-ix-Y9p" secondAttribute="trailing" constant="20" id="8fJ-U3-Vcw"/>
                                                 <constraint firstItem="e69-iL-PcJ" firstAttribute="top" secondItem="cIN-RA-HvS" secondAttribute="topMargin" id="KcI-o9-4To"/>
                                                 <constraint firstItem="e69-iL-PcJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QDY-ib-yUy" secondAttribute="trailing" constant="5" id="VAJ-Qd-7A6"/>
                                                 <constraint firstItem="xPE-2G-QI4" firstAttribute="leading" secondItem="cIN-RA-HvS" secondAttribute="leading" constant="10" id="a9h-0V-Ozu"/>
                                                 <constraint firstItem="hSV-ix-Y9p" firstAttribute="leading" secondItem="xPE-2G-QI4" secondAttribute="trailing" constant="10" id="buZ-bc-Qgl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hSV-ix-Y9p" secondAttribute="bottom" constant="8" id="fbS-8v-dfR"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="e69-iL-PcJ" secondAttribute="trailing" id="gdh-Bi-FwI"/>
                                                 <constraint firstItem="hSV-ix-Y9p" firstAttribute="centerY" secondItem="cIN-RA-HvS" secondAttribute="centerY" id="hRc-bE-krH"/>
                                                 <constraint firstItem="xPE-2G-QI4" firstAttribute="centerY" secondItem="cIN-RA-HvS" secondAttribute="centerY" id="lm9-Hq-BGr"/>
-                                                <constraint firstItem="QDY-ib-yUy" firstAttribute="top" secondItem="cIN-RA-HvS" secondAttribute="topMargin" id="pFY-7M-iSJ"/>
+                                                <constraint firstItem="hSV-ix-Y9p" firstAttribute="top" secondItem="cIN-RA-HvS" secondAttribute="topMargin" constant="8" id="nQI-7n-WcH"/>
                                                 <constraint firstItem="QDY-ib-yUy" firstAttribute="centerY" secondItem="cIN-RA-HvS" secondAttribute="centerY" id="qIh-pE-Wsc"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1087,11 +1087,15 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                             <constraint firstItem="ROm-WG-SEY" firstAttribute="leading" secondItem="wuH-bZ-zoe" secondAttribute="leading" id="syZ-ig-z94"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Messages" id="f6O-KX-8MT">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="jQo-xt-T3P"/>
+                    <navigationItem key="navigationItem" title="Chats" id="f6O-KX-8MT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="jQo-xt-T3P">
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="I65-Wb-4o1" id="aPR-d8-geL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Ski Invites" image="tray.fill" catalog="system" id="Kce-QI-yDW">
                             <connections>
-                                <segue destination="T5E-kl-1fz" kind="show" id="Hol-fc-PRv"/>
+                                <segue destination="T5E-kl-1fz" kind="show" identifier="toInvitesVC" id="Hol-fc-PRv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2347,9 +2351,6 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

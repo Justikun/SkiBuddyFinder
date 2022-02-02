@@ -17,4 +17,12 @@ extension DateFormatter {
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }
+    
+    var formatDateForId: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .long
+        formatter.locale = .current
+        return formatter
+    }
 }

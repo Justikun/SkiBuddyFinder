@@ -50,7 +50,7 @@ extension UIView {
         self.contentMode = .scaleAspectFill
         self.layer.masksToBounds = true
         self.layer.cornerRadius = self.fs_width / 2.0
-        self.backgroundColor = .red
+        self.backgroundColor = .lightGray
     }
 }
 

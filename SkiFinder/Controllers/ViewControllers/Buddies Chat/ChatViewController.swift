@@ -7,6 +7,7 @@
 
 import UIKit
 import MessageKit
+import InputBarAccessoryView
 
 struct ChatMessage: MessageType {
     var sender: SenderType
@@ -23,16 +24,25 @@ struct Sender: SenderType {
 
 class ChatViewController: MessagesViewController {
     // MARK: - Properties
-    public var otherUser: String
+    public let otherUserUid: String
+    private let conversationId: String?
     public var isNewConversation = false
     
     private var messages = [ChatMessage]()
-    private var dummySender = Sender(photoURL: "", senderId: "1", displayName: "Wario")
+    private var selfSender: Sender? {
+        guard let user = UserController.shared.user,
+              let userPhotoURL = user.profilePhotoURL else { return nil }
+        return Sender(photoURL: userPhotoURL, senderId: user.uid, displayName: user.firstName)
+    }
     
 
-    init(with user: User) {
-        self.otherUser = user.uid
+    init(with userUid: String, id: String?) {
+        self.otherUserUid = userUid
+        self.conversationId = id
         super.init(nibName: nil, bundle: nil)
+        if let conversationId = conversationId {
+            listenForMessages(id: conversationId)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -43,9 +53,22 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMessages()
-        
-        messages.append(ChatMessage(sender: dummySender, messageId: "1", sentDate: Date(), kind: .text("Hey Waluigi! I forgot the time we are going to Mario's to mess with him. Could you remind me the timw?")))
-        messages.append(ChatMessage(sender: dummySender, messageId: "2", sentDate: Date(), kind: .text("time*")))
+    }
+    
+    private func listenForMessages(id: String) {
+        DatabaseManager.shared.getAllMessagesForConversation(with: id) { [weak self] result in
+            switch result {
+            case .success(let messages):
+                guard !messages.isEmpty else { return }
+                self?.messages = messages
+                
+                DispatchQueue.main.async {
+                    self?.messagesCollectionView.reloadDataAndKeepOffset()
+                }
+            case .failure(let error):
+                print("Failed to get messages: \(error)")
+            }
+        }
     }
 
     // MARK: - Methods
@@ -53,12 +76,58 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        messageInputBar.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        messageInputBar.inputTextView.becomeFirstResponder()
     }
 } // End of class
 
+extension ChatViewController: InputBarAccessoryViewDelegate {
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        // Check that message doesn't only have spaces
+        guard !text.replacingOccurrences(of: " ", with: "").isEmpty,
+              let selfSender = self.selfSender,
+              let messageId = createMessageId(),
+              let conversationId = conversationId else { return }
+        
+        let message  = ChatMessage(sender: selfSender,
+                                   messageId: messageId,
+                                   sentDate: Date(),
+                                   kind: .text(text))
+        
+        
+        DatabaseManager.shared.sendMessage(to: conversationId, message: message) {[weak self] success in
+            if success {
+                print("Sent Message: \(text)")
+            } else {
+                print("failed to send")
+            }
+        }
+    }
+    
+    private func createMessageId() -> String? {
+        // Components for uniqie message id: date, otherUserUid, senderUid
+        guard let user = UserController.shared.user else { return nil }
+        
+        let dateString = DateFormatter().formatDateForId.string(from: Date())
+        let newIdentifier = "\(otherUserUid)_\(user.uid)_\(dateString)"
+        
+        print("Created message id: \(newIdentifier)")
+        
+        return newIdentifier
+    }
+    
+} // End of extension
+
 extension ChatViewController: MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
     func currentSender() -> SenderType {
-        return dummySender
+        if let sender = selfSender {
+            return sender
+        }
+        fatalError("Self Sender is nil. User should be logged in")
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
@@ -68,4 +137,4 @@ extension ChatViewController: MessagesDataSource, MessagesLayoutDelegate, Messag
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
         return messages.count
     }
-}
+} // End of extension

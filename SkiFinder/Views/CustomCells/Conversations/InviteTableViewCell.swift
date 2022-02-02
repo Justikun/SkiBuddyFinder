@@ -32,8 +32,6 @@ class InviteTableViewCell: UITableViewCell {
     // MARK: - Actions
     @IBAction func acceptButtonPressed(_ sender: UIButton) {
         guard let inviterUid = inviterUid else { return }
-
-        print("Pressed Accept Button")
         delegate?.acceptInvite(uid: inviterUid)
     }
     

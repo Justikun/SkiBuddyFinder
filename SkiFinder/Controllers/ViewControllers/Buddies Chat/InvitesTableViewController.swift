@@ -8,9 +8,14 @@
 import UIKit
 import SDWebImage
 
+protocol InvitesTableViewControllerDelegate {
+    func createNewConversation(with uid: String, name: String)
+}
+
 class InvitesTableViewController: UITableViewController {
     // MARK: - Properties
     var invitesWithNoChat: [SkiInvites] = []
+    var delegate: InvitesTableViewControllerDelegate?
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -55,8 +60,13 @@ extension InvitesTableViewController: InviteTableViewCellDelegate {
         // Save user invite and start conversation
         guard let user = UserController.shared.user else { return }
         
+        var inviterUid: String?
+        var inviterFirstName: String?
+        
         user.skiInvites.forEach {
             if $0.inviterUid == uid {
+                inviterUid = $0.inviterUid
+                inviterFirstName = $0.inviterFirstName
                 $0.didStartConversation = true
             }
         }
@@ -65,12 +75,15 @@ extension InvitesTableViewController: InviteTableViewCellDelegate {
             if success {
                 print("Did update user")
                 DispatchQueue.main.async {
+                    guard let inviterUid = inviterUid,
+                          let inviterFirstName = inviterFirstName else { return }
+                    
+                    // Updates local current user
                     UserController.shared.user = user
                     self?.navigationController?.popViewController(animated: true)
-                    self?.invitesWithNoChat = []
-                    self?.getSkiInvitesWithNoChat()
-                    self?.tableView.reloadData()
-                    // Protocol to create a new Chat
+                    
+
+                    self?.delegate?.createNewConversation(with: inviterUid, name: inviterFirstName)
                 }
                 return
             } else {

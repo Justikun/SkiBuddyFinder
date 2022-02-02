@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ConversationsViewController: UIViewController {
     // MARK: - Outlets
@@ -14,6 +15,7 @@ class ConversationsViewController: UIViewController {
     // MARK: - Properties
     private let chatCell = "chatCell"
     private var chats: [Chat] = []
+    private let inviteVCSegue = "toInvitesVC"
     
     private let loadIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
@@ -35,26 +37,39 @@ class ConversationsViewController: UIViewController {
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        InvitesTableViewController().delegate = self
         
         view.addSubview(noConversationsLabel)
         setupConversationTableView()
-        
-        fetchConversations()
         fetchChats()
     }
 
     // MARK: - Actions
+    @IBAction func refreshButtonPressed(_ sender: Any) {
+        
+    }
     
     // MARK: - Methods
     
     private func fetchChats() {
-        guard let user = UserController.shared.user else { return }
-        DatabaseManager.shared.fetchAllChats(forUid: user.uid) { result in
+        guard let user = UserController.shared.user else { return print("failed refresh") }
+        print("refresh Button pressed")
+        DatabaseManager.shared.getAllChats(for: user.uid) { result in
             switch result {
             case .success(let chats):
-                self.chats = chats
-            case .failure(let error):
-                print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
+                DispatchQueue.main.async {
+                    if chats.count > 0 {
+                        self.conversationTableView.isHidden = false
+                    } else {
+                        self.conversationTableView.isHidden = true
+                    }
+                    
+                    self.chats = chats
+                    self.conversationTableView.reloadData()
+                    print("SUCCESS", "Chats:", chats.count)
+                }
+            case .failure(_):
+                print("FAILURE")
             }
         }
     }
@@ -64,26 +79,57 @@ class ConversationsViewController: UIViewController {
         conversationTableView.delegate = self
         conversationTableView.dataSource = self
     }
-
     
-    private func fetchConversations() {
-        conversationTableView.isHidden = false
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == inviteVCSegue {
+            guard let destination = segue.destination as? InvitesTableViewController else { return }
+            destination.delegate = self
+        }
     }
-    
 } // End of class
 
 // Set up for conversation tableview
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return chats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: chatCell, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
-        cell.chatImage.image = UIImage(named: "prism")
-        cell.firstNameLabel.text = "Jonny"
-        cell.messageLabel.text = "Well this is going to be a super long message because I have quite the story to tell you."
-        cell.timeStampLabel.text = "2hrs"
+        let chat = chats[indexPath.row]
+        
+        // Setting profile image
+        StorageManager.shared.getDownloadURL(for: chat.otherUserUid) { result in
+            switch result {
+            case .success(let url):
+                DispatchQueue.main.async {
+                    cell.chatImage.sd_setImage(with: url)
+                }
+            case .failure(let error):
+                print("Failed to download image", error.localizedDescription)
+            }
+        }
+        
+        // Setting timestamp label
+        if let date = chat.latestMessage?.date {
+            cell.timeStampLabel.text = DateFormatter().formatter.string(from: date)
+        } else {
+            cell.timeStampLabel.text = ""
+        }
+        
+        cell.firstNameLabel.text = chat.otherUserfirstName
+        cell.messageLabel.text = chat.latestMessage?.message ?? ""
+        
+        // Setting notification dot        
+        if let latestMessage = chat.latestMessage {
+            if latestMessage.isRead {
+                cell.notificationDot.isHidden = true
+            } else {
+                cell.notificationDot.isHidden = false
+            }
+        }
+        
+        
         return cell
     }
     
@@ -91,11 +137,29 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
         // Unhighlights selected
         tableView.deselectRow(at: indexPath, animated: true)
         // Start conversation
-        let targetUser = 0
-        let vc = ChatViewController(with: <#T##User#>)
-        vc.title = "Jenny Smith"
+        let targetUser = chats[indexPath.row]
+        let vc = ChatViewController(with: targetUser.otherUserUid, id: targetUser.conversationId)
+        vc.title = targetUser.otherUserfirstName
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
 //
     }
 } // End of class
+
+extension ConversationsViewController: InvitesTableViewControllerDelegate {
+    func createNewConversation(with uid: String, name: String) {
+        
+        guard let conversationId = DatabaseManager.shared.createConversationId(otherUserUid: uid) else { return }
+        let vc = ChatViewController(with: uid, id: conversationId)
+        vc.title = name
+        vc.isNewConversation = true
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+        
+        DatabaseManager.shared.createNewConversation(with: uid, otherUserfirstName: name, conversationId: conversationId) { success in
+            if success {
+                print("successfully created conversations in conversation collection.")
+            }
+        }
+    }
+}
