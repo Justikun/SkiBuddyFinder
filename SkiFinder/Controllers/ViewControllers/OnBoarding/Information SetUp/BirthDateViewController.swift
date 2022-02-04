@@ -16,6 +16,7 @@ class BirthDateViewController: UIViewController {
     // MARK: - Properties
     var user: User?
     let datePicker = UIDatePicker()
+    var tempDate: Date?
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -33,10 +34,9 @@ class BirthDateViewController: UIViewController {
     @IBAction func continueButtonPressed(_ sender: UIButton) {
 
         guard let user = user,
-              let birthDate = birthDateTextField.text,
-              let formattedDate = DateFormatter().formatter.date(from: birthDate) else { return }
+              let birthDate = tempDate else { return }
         
-        user.birthDate = formattedDate
+        user.birthDate = birthDate
                 
         performSegue(withIdentifier: "toSkiPassLocationVC", sender: user)
     }
@@ -48,7 +48,8 @@ class BirthDateViewController: UIViewController {
         birthDateTextField.setLeftPaddingPoints()
         
         continueButton.setPillShape()
-        continueButton.setShadow()
+        continueButton.addShadow(offset: CGSize.init(width: 0, height: 2), color: UIColor.black, radius: 3.0, opacity: 0.20)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -96,7 +97,8 @@ extension BirthDateViewController {
     @objc
     private func ageDoneTapped() {
         continueButton.isEnabled = true
-        birthDateTextField.text = DateFormatter().formatter.string(from: datePicker.date)
+        birthDateTextField.text = "\(datePicker.date.age)"
+        tempDate = datePicker.date
         self.view.endEditing(true)
     }
 }

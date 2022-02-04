@@ -202,6 +202,21 @@ class UserController {
 
     }
     
-    
+    /// Fetches new images other users set for their profile pic
+    func updateNewUserPhotos() {
+        guard let user = user else { return }
+        
+        for i in user.skiInvites {
+            let ref = storage.reference(withPath: i.inviterUid)
+            // Retreieves url from firebase storage
+            ref.downloadURL { url, error in
+                if let error = error {
+                    print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
+                } else if let url = url {
+                    i.inviterPhotoURL = url.absoluteString
+                }
+            }
+        }
+    }
     /// Deletes a user on firestore
 }

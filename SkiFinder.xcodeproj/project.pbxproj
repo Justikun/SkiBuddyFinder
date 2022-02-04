@@ -19,12 +19,13 @@
 		3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A999278EADE500B4D813 /* ProfileCollectionViewCell.swift */; };
 		3628A99C278EBAAC00B4D813 /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A99B278EBAAC00B4D813 /* ProfileCollectionViewController.swift */; };
 		3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */; };
-		3628A9AC278FCF0A00B4D813 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A9AB278FCF0A00B4D813 /* DateExtension.swift */; };
+		3628A9AC278FCF0A00B4D813 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628A9AB278FCF0A00B4D813 /* DateExtensions.swift */; };
 		363C47032798B21E005DB518 /* SkiUserCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C47022798B21E005DB518 /* SkiUserCalendarTableViewCell.swift */; };
 		3658753E27A4AD6D00D053A8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658753D27A4AD6D00D053A8 /* StorageManager.swift */; };
 		3658754127A4B43900D053A8 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754027A4B43900D053A8 /* ChatTableViewCell.swift */; };
 		3658754327A76A6500D053A8 /* InvitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754227A76A6500D053A8 /* InvitesTableViewController.swift */; };
 		3658754527A8791B00D053A8 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754427A8791A00D053A8 /* InviteTableViewCell.swift */; };
+		3658754827AB1F2500D053A8 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3658754727AB1F2400D053A8 /* CustomLabel.swift */; };
 		365EEB08278BDA1F008E4B8B /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */; };
 		365EEB0A278BDA81008E4B8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB09278BDA81008E4B8B /* User.swift */; };
 		365EEB0C278BE15E008E4B8B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EEB0B278BE15E008E4B8B /* UserController.swift */; };
@@ -74,7 +75,7 @@
 		36F9FFF627A218F800BAF4BE /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FFF527A218F800BAF4BE /* ConversationsViewController.swift */; };
 		36F9FFFF27A25A5000BAF4BE /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36F9FFFE27A25A5000BAF4BE /* MessageKit */; };
 		36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */; };
-		36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */; };
+		36FC23B5279F9F2D00CC7255 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B4279F9F2D00CC7255 /* ViewExtensions.swift */; };
 		36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */; };
 		36FC23BB279FC24800CC7255 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23BA279FC24800CC7255 /* VerifyPhoneNumberViewController.swift */; };
 		36FC23BD279FD8E500CC7255 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FC23BC279FD8E500CC7255 /* DatabaseManager.swift */; };
@@ -104,12 +105,13 @@
 		3628A999278EADE500B4D813 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		3628A99B278EBAAC00B4D813 /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		3628A99F278ECA4F00B4D813 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		3628A9AB278FCF0A00B4D813 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		3628A9AB278FCF0A00B4D813 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		363C47022798B21E005DB518 /* SkiUserCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiUserCalendarTableViewCell.swift; sourceTree = "<group>"; };
 		3658753D27A4AD6D00D053A8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		3658754027A4B43900D053A8 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		3658754227A76A6500D053A8 /* InvitesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesTableViewController.swift; sourceTree = "<group>"; };
 		3658754427A8791A00D053A8 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
+		3658754727AB1F2400D053A8 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		365EEB07278BDA1F008E4B8B /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		365EEB09278BDA81008E4B8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		365EEB0B278BE15E008E4B8B /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -131,7 +133,7 @@
 		36F9FFF527A218F800BAF4BE /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		36FC23AD279F841100CC7255 /* SkiFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkiFinder.entitlements; sourceTree = "<group>"; };
 		36FC23B2279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithPhoneNumberViewController.swift; sourceTree = "<group>"; };
-		36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		36FC23B4279F9F2D00CC7255 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		36FC23B8279FC21F00CC7255 /* OneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeCodeTextField.swift; sourceTree = "<group>"; };
 		36FC23BA279FC24800CC7255 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		36FC23BC279FD8E500CC7255 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
@@ -239,6 +241,14 @@
 			path = Conversations;
 			sourceTree = "<group>";
 		};
+		3658754627AB1EE500D053A8 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				3658754727AB1F2400D053A8 /* CustomLabel.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
 		365EEB01278BD6FE008E4B8B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +263,7 @@
 		365EEB02278BD75A008E4B8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3658754627AB1EE500D053A8 /* CustomUI */,
 				365EEB18278C14A4008E4B8B /* CustomCells */,
 				360DBB43278A3E5600F41CBF /* Main.storyboard */,
 				360DBB48278A3E6200F41CBF /* LaunchScreen.storyboard */,
@@ -286,7 +297,7 @@
 			children = (
 				36FC23B1279F937700CC7255 /* Main Navigation */,
 				36FC23B0279F936B00CC7255 /* Feed */,
-				36F9FFF427A2188C00BAF4BE /* Buddies Chat */,
+				36F9FFF427A2188C00BAF4BE /* Chat */,
 				36FC23AF279F935500CC7255 /* Profile */,
 				36FC23AE279F933B00CC7255 /* OnBoarding */,
 			);
@@ -307,9 +318,9 @@
 			children = (
 				365EEB12278C0A3D008E4B8B /* AuthErrorCodeExtension.swift */,
 				367D742C278D67C1008D7007 /* Constants.swift */,
-				3628A9AB278FCF0A00B4D813 /* DateExtension.swift */,
+				3628A9AB278FCF0A00B4D813 /* DateExtensions.swift */,
 				36DFE1ED27925B0C00151478 /* FirebaseNetworkError.swift */,
-				36FC23B4279F9F2D00CC7255 /* TextFieldExtension.swift */,
+				36FC23B4279F9F2D00CC7255 /* ViewExtensions.swift */,
 			);
 			path = "Helpers + Extensions";
 			sourceTree = "<group>";
@@ -336,14 +347,14 @@
 			path = SkiUserProfiles;
 			sourceTree = "<group>";
 		};
-		36F9FFF427A2188C00BAF4BE /* Buddies Chat */ = {
+		36F9FFF427A2188C00BAF4BE /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				36F9FFF527A218F800BAF4BE /* ConversationsViewController.swift */,
 				36F9000727A26D4E00BAF4BE /* ChatViewController.swift */,
 				3658754227A76A6500D053A8 /* InvitesTableViewController.swift */,
 			);
-			path = "Buddies Chat";
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		36FC23AE279F933B00CC7255 /* OnBoarding */ = {
@@ -613,15 +624,16 @@
 				36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */,
 				36FC23C1279FE6DE00CC7255 /* AuthManager.swift in Sources */,
 				3658754127A4B43900D053A8 /* ChatTableViewCell.swift in Sources */,
-				36FC23B5279F9F2D00CC7255 /* TextFieldExtension.swift in Sources */,
+				36FC23B5279F9F2D00CC7255 /* ViewExtensions.swift in Sources */,
 				365EEB0E278BEEF7008E4B8B /* SignUpViewController.swift in Sources */,
-				3628A9AC278FCF0A00B4D813 /* DateExtension.swift in Sources */,
+				3628A9AC278FCF0A00B4D813 /* DateExtensions.swift in Sources */,
 				363C47032798B21E005DB518 /* SkiUserCalendarTableViewCell.swift in Sources */,
 				365EEB08278BDA1F008E4B8B /* FeedTableViewController.swift in Sources */,
 				3675353727969992004129CB /* AllUsersController.swift in Sources */,
 				36FC23B9279FC21F00CC7255 /* OneTimeCodeTextField.swift in Sources */,
 				367D7427278D5BEC008D7007 /* FeedNavViewController.swift in Sources */,
 				36FC23BD279FD8E500CC7255 /* DatabaseManager.swift in Sources */,
+				3658754827AB1F2500D053A8 /* CustomLabel.swift in Sources */,
 				3628A9A0278ECA4F00B4D813 /* ProfileViewController.swift in Sources */,
 				3628A99C278EBAAC00B4D813 /* ProfileCollectionViewController.swift in Sources */,
 				360DBB40278A3E5600F41CBF /* SceneDelegate.swift in Sources */,
@@ -876,8 +888,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MessageKit/MessageKit";
 			requirement = {
-				kind = exactVersion;
-				version = 3.7.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -51,7 +51,8 @@ class SkiProficiencyViewController: UIViewController {
         skiProficiencyTextField.setLeftPaddingPoints()
         
         continueButton.setPillShape()
-        continueButton.setShadow()
+        continueButton.addShadow(offset: CGSize.init(width: 0, height: 2), color: UIColor.black, radius: 3.0, opacity: 0.20)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

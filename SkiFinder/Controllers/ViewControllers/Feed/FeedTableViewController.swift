@@ -13,7 +13,7 @@ class FeedTableViewController: UITableViewController {
     var handler: AuthStateDidChangeListenerHandle?
     
     // MARK: - Outlets
-
+    
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +44,7 @@ class FeedTableViewController: UITableViewController {
     }
         
     // MARK: - Methods
+    
     func updateViews() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

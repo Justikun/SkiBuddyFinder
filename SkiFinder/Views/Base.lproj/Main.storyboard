@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -34,56 +35,78 @@
                                                 <constraint firstAttribute="width" secondItem="vp5-nU-6Gt" secondAttribute="height" multiplier="1:1" id="jZD-aR-Y4C"/>
                                             </constraints>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rle-Yp-dz0">
+                                            <rect key="frame" x="0.0" y="168.5" width="414" height="112.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Bio)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taO-Yx-bYx">
-                                            <rect key="frame" x="30" y="261.5" width="354" height="19.5"/>
+                                            <rect key="frame" x="20" y="241.5" width="374" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(style)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJR-MA-kHb">
-                                            <rect key="frame" x="30" y="230" width="354" height="21.5"/>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(style)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJR-MA-kHb">
+                                            <rect key="frame" x="20" y="215" width="374" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Name) &amp; (Age)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZF-PB-ZJl">
-                                            <rect key="frame" x="30" y="191" width="354" height="29"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="20" y="181" width="374" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(skill)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0Q-mB-TQV">
-                                            <rect key="frame" x="309" y="5" width="100" height="20.5"/>
+                                            <rect key="frame" x="294" y="10" width="110" height="25"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="5u9-78-ZY0"/>
+                                                <constraint firstAttribute="width" constant="110" id="5u9-78-ZY0"/>
+                                                <constraint firstAttribute="height" constant="25" id="fhl-nn-tJx"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛷" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYo-Yw-a60">
+                                            <rect key="frame" x="294" y="45" width="110" height="38.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="taO-Yx-bYx" secondAttribute="trailing" constant="10" id="5lw-zn-zcN"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="tZF-PB-ZJl" secondAttribute="trailing" constant="10" id="ANM-Ah-WiF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="taO-Yx-bYx" secondAttribute="trailing" id="5lw-zn-zcN"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rle-Yp-dz0" secondAttribute="trailing" id="A2D-8w-enZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tZF-PB-ZJl" secondAttribute="trailing" id="ANM-Ah-WiF"/>
                                         <constraint firstAttribute="trailing" secondItem="vp5-nU-6Gt" secondAttribute="trailing" id="EII-G7-spD"/>
                                         <constraint firstAttribute="bottom" secondItem="vp5-nU-6Gt" secondAttribute="bottom" id="MfP-RK-ZSN"/>
-                                        <constraint firstItem="taO-Yx-bYx" firstAttribute="top" secondItem="MJR-MA-kHb" secondAttribute="bottom" constant="10" id="YAf-Pf-77x"/>
-                                        <constraint firstItem="MJR-MA-kHb" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leadingMargin" constant="10" id="Ye6-Ws-rwc"/>
-                                        <constraint firstItem="taO-Yx-bYx" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leadingMargin" constant="10" id="ciw-7M-D6E"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="MJR-MA-kHb" secondAttribute="trailing" constant="10" id="cxm-g3-fDP"/>
+                                        <constraint firstItem="gYo-Yw-a60" firstAttribute="top" secondItem="o0Q-mB-TQV" secondAttribute="bottom" constant="10" id="OAb-VX-NYq"/>
+                                        <constraint firstItem="gYo-Yw-a60" firstAttribute="leading" secondItem="o0Q-mB-TQV" secondAttribute="leading" id="Psv-PU-yTd"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rle-Yp-dz0" secondAttribute="bottom" id="Uex-8J-noY"/>
+                                        <constraint firstItem="taO-Yx-bYx" firstAttribute="top" secondItem="MJR-MA-kHb" secondAttribute="bottom" constant="5" id="YAf-Pf-77x"/>
+                                        <constraint firstItem="MJR-MA-kHb" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leadingMargin" id="Ye6-Ws-rwc"/>
+                                        <constraint firstItem="Rle-Yp-dz0" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leading" id="ZDq-Cg-om8"/>
+                                        <constraint firstItem="taO-Yx-bYx" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leadingMargin" id="ciw-7M-D6E"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="MJR-MA-kHb" secondAttribute="trailing" id="cxm-g3-fDP"/>
+                                        <constraint firstItem="Rle-Yp-dz0" firstAttribute="height" secondItem="XUD-qo-UpB" secondAttribute="height" multiplier="0.4" id="jJk-3w-4Eu"/>
+                                        <constraint firstItem="gYo-Yw-a60" firstAttribute="trailing" secondItem="o0Q-mB-TQV" secondAttribute="trailing" id="kOg-He-DrO"/>
                                         <constraint firstItem="vp5-nU-6Gt" firstAttribute="top" secondItem="XUD-qo-UpB" secondAttribute="top" id="qeo-1z-xx1"/>
                                         <constraint firstItem="vp5-nU-6Gt" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leading" id="tuN-CN-5HQ"/>
-                                        <constraint firstItem="MJR-MA-kHb" firstAttribute="top" secondItem="tZF-PB-ZJl" secondAttribute="bottom" constant="10" id="v75-n8-MvA"/>
-                                        <constraint firstAttribute="trailing" secondItem="o0Q-mB-TQV" secondAttribute="trailing" constant="5" id="vK9-Ba-vRw"/>
-                                        <constraint firstItem="tZF-PB-ZJl" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leadingMargin" constant="10" id="y1m-wJ-UGL"/>
-                                        <constraint firstItem="taO-Yx-bYx" firstAttribute="bottom" secondItem="vp5-nU-6Gt" secondAttribute="bottom" id="yVx-qu-Zld"/>
-                                        <constraint firstItem="o0Q-mB-TQV" firstAttribute="top" secondItem="XUD-qo-UpB" secondAttribute="top" constant="5" id="yxK-Ef-apo"/>
+                                        <constraint firstItem="MJR-MA-kHb" firstAttribute="top" secondItem="tZF-PB-ZJl" secondAttribute="bottom" constant="5" id="v75-n8-MvA"/>
+                                        <constraint firstAttribute="trailing" secondItem="o0Q-mB-TQV" secondAttribute="trailing" constant="10" id="vK9-Ba-vRw"/>
+                                        <constraint firstItem="tZF-PB-ZJl" firstAttribute="leading" secondItem="XUD-qo-UpB" secondAttribute="leadingMargin" id="y1m-wJ-UGL"/>
+                                        <constraint firstItem="taO-Yx-bYx" firstAttribute="bottom" secondItem="vp5-nU-6Gt" secondAttribute="bottom" constant="-20" id="yVx-qu-Zld"/>
+                                        <constraint firstItem="o0Q-mB-TQV" firstAttribute="top" secondItem="XUD-qo-UpB" secondAttribute="top" constant="10" id="yxK-Ef-apo"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bioLabel" destination="taO-Yx-bYx" id="IFP-Uf-pBC"/>
+                                    <outlet property="fadeView" destination="Rle-Yp-dz0" id="kfW-dL-igg"/>
                                     <outlet property="nameAgeLabel" destination="tZF-PB-ZJl" id="1z6-ql-sBr"/>
+                                    <outlet property="skiTypeLabel" destination="gYo-Yw-a60" id="Fx8-Gl-p8r"/>
                                     <outlet property="skillProficiencyLabel" destination="o0Q-mB-TQV" id="yHI-6Q-Tal"/>
                                     <outlet property="styleLabel" destination="MJR-MA-kHb" id="sxX-zO-QsJ"/>
                                     <outlet property="userImage" destination="vp5-nU-6Gt" id="Vw4-t4-N56"/>
@@ -96,7 +119,7 @@
                             <outlet property="delegate" destination="6ee-vw-5Nr" id="nW3-D3-sH9"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="wind.snow" catalog="system" id="Whj-b9-SeD"/>
+                    <tabBarItem key="tabBarItem" title="" id="Whj-b9-SeD"/>
                     <navigationItem key="navigationItem" title="Ski Buddy Finder" id="gUL-Af-iHN">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="AOq-hg-USP">
                             <connections>
@@ -107,7 +130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-6U-c7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2771" y="-1330"/>
+            <point key="canvasLocation" x="2769.5652173913045" y="-1330.5803571428571"/>
         </scene>
         <!--Ski User Table View Controller-->
         <scene sceneID="BdP-HB-1k1">
@@ -385,9 +408,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-zD-cIW">
-                                            <rect key="frame" x="67" y="12" width="280.5" height="20"/>
+                                            <rect key="frame" x="61.5" y="12" width="291" height="20"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Pu-yd5">
                                                     <rect key="frame" x="0.0" y="0.0" width="111.5" height="20"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-Md-V71">
@@ -409,7 +432,7 @@
                                                                 <constraint firstItem="1vI-c7-RaJ" firstAttribute="centerX" secondItem="PEQ-Md-V71" secondAttribute="centerX" id="zlM-dm-Nwq"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-V9-9KD">
                                                             <rect key="frame" x="48" y="0.0" width="63.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -417,8 +440,8 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
-                                                    <rect key="frame" x="141.5" y="0.0" width="139" height="20"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lud-ET-qwk">
+                                                    <rect key="frame" x="141.5" y="0.0" width="149.5" height="20"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3J-lD-tlE">
                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -439,8 +462,8 @@
                                                                 <constraint firstAttribute="width" secondItem="v3J-lD-tlE" secondAttribute="height" multiplier="1:1" id="Z3O-aq-ZuD"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Maybe Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
-                                                            <rect key="frame" x="48" y="0.0" width="91" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open to Ski" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-oi-rZo">
+                                                            <rect key="frame" x="48" y="0.0" width="101.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -492,14 +515,14 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O79-vj-kQ5">
                                         <rect key="frame" x="20.5" y="207" width="373" height="61"/>
-                                        <string key="text">Are you looking for friends to ski with?
-Ski Finder will bring fun ski days, and lasting friendships!</string>
+                                        <string key="text">Looking for friends to ski with?
+Ski Buddy Finder will bring fun ski days, and lasting friendships!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Friends, More Fun!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arw-md-tbL">
-                                        <rect key="frame" x="65.5" y="145.5" width="283" height="31.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ski Buddy Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arw-md-tbL">
+                                        <rect key="frame" x="105" y="145.5" width="204" height="31.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -856,11 +879,19 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
             </objects>
             <point key="canvasLocation" x="-2317" y="-1202"/>
         </scene>
-        <!--Item-->
+        <!--Feed Nav View Controller-->
         <scene sceneID="0lq-Im-R4U">
             <objects>
                 <navigationController storyboardIdentifier="FeedNVC" id="1WO-Ib-KPf" customClass="FeedNavViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HdI-6Q-4Zg"/>
+                    <tabBarItem key="tabBarItem" title="" id="HdI-6Q-4Zg">
+                        <imageReference key="image" image="wind.snow" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0M3-qr-22M">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -904,8 +935,8 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                     </tabBar>
                     <connections>
                         <segue destination="1WO-Ib-KPf" kind="relationship" relationship="viewControllers" id="gSY-lT-AVj"/>
-                        <segue destination="93p-b6-qha" kind="relationship" relationship="viewControllers" id="r2b-sj-huM"/>
                         <segue destination="5g3-Ud-Mfy" kind="relationship" relationship="viewControllers" id="fjO-Qv-gR2"/>
+                        <segue destination="93p-b6-qha" kind="relationship" relationship="viewControllers" id="r2b-sj-huM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7j-nU-Yid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -980,7 +1011,15 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         <scene sceneID="nRc-Zs-k7r">
             <objects>
                 <navigationController id="5g3-Ud-Mfy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="message" catalog="system" id="riE-va-av4"/>
+                    <tabBarItem key="tabBarItem" title="" id="riE-va-av4">
+                        <imageReference key="image" image="message" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LQV-3h-w8r">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1086,11 +1125,6 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="f6O-KX-8MT">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="jQo-xt-T3P">
-                            <connections>
-                                <action selector="refreshButtonPressed:" destination="I65-Wb-4o1" id="aPR-d8-geL"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Ski Invites" image="tray.fill" catalog="system" id="Kce-QI-yDW">
                             <connections>
                                 <segue destination="T5E-kl-1fz" kind="show" identifier="toInvitesVC" id="Hol-fc-PRv"/>
@@ -1121,8 +1155,9 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j9p-Fd-jl4">
-                                            <rect key="frame" x="20" y="5.5" width="80" height="77.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j9p-Fd-jl4">
+                                            <rect key="frame" x="20" y="4.5" width="80" height="80"/>
+                                            <color key="backgroundColor" name="avatarViewBackground"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="j9p-Fd-jl4" secondAttribute="height" multiplier="1:1" id="97J-x5-aQG"/>
                                                 <constraint firstAttribute="width" constant="80" id="EHz-6W-Fuc"/>
@@ -1697,6 +1732,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                                                         </label>
                                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkG-T8-mf2">
                                                                             <rect key="frame" x="137.5" y="0.0" width="51" height="32"/>
+                                                                            <color key="onTintColor" systemColor="tintColor"/>
                                                                         </switch>
                                                                     </subviews>
                                                                 </stackView>
@@ -1711,6 +1747,7 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
                                                                         </label>
                                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YmZ-qf-Amb">
                                                                             <rect key="frame" x="124.5" y="0.0" width="51" height="32"/>
+                                                                            <color key="onTintColor" systemColor="tintColor"/>
                                                                         </switch>
                                                                     </subviews>
                                                                 </stackView>
@@ -2325,10 +2362,12 @@ Ski Finder will bring fun ski days, and lasting friendships!</string>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="tray.fill" catalog="system" width="128" height="88"/>
         <image name="wind.snow" catalog="system" width="128" height="112"/>
+        <namedColor name="avatarViewBackground">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

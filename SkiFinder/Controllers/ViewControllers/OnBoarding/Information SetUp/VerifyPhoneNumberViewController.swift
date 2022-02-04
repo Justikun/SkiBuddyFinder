@@ -74,8 +74,8 @@ class VerifyPhoneNumberViewController: UIViewController {
     private func setUpStyles() {
         // continueButton styles
         continueButton.setPillShape()
-        continueButton.setShadow()
         continueButton.backgroundColor = .white
+        continueButton.addShadow(offset: CGSize.init(width: 0, height: 2), color: UIColor.black, radius: 3.0, opacity: 0.20)
     }
     
     private func setUpLoadingIndicator() {

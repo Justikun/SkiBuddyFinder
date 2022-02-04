@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +52,7 @@ class ProfileViewController: UIViewController {
             if self.profilePicture.image == nil {
                 self.photoActivityIndicator.startAnimating()
             }
-            
+            self.profilePicture.setPillShape3()
             guard let user = UserController.shared.user else { return }
             self.nameAndAgeLabel.text = "\(user.firstName), \(user.birthDate.age)"
             self.getImage()
@@ -96,14 +95,14 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let photoNames = ["city", "green", "pine", "prism", "square", "window","city", "green", "pine", "prism", "square", "window"]
+        let photoNames = ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12"]
         return photoNames.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCollectionVIewCell", for: indexPath) as? ProfileCollectionViewCell else { return UICollectionViewCell() }
         
-        let photoNames = ["city", "green", "pine", "prism", "square", "window","city", "green", "pine", "prism", "square", "window"]
+        let photoNames = ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12"]
         let photo = UIImage(named: photoNames[indexPath.row])
         cell.photoImage = photo
     

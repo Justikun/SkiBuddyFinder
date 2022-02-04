@@ -21,7 +21,6 @@ class StartScreenViewController: UIViewController {
     
     private func setUpStyles() {
         // Fade view
-        
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = fadeView.bounds
         gradientLayer.colors = [
@@ -34,13 +33,14 @@ class StartScreenViewController: UIViewController {
 
         // Login buttton
         loginButton.setPillShape()
-        loginButton.setShadow()
+        loginButton.addShadow(offset: CGSize.init(width: 0, height: 2), color: UIColor.black, radius: 3.0, opacity: 0.20)
+
         
 //        UIColor(red: 196/255, green: 224/255, blue: 255/255, alpha: 0.90)
         
         // Sign up button
         signUpButton.setPillShape()
-        signUpButton.setShadow()
+        signUpButton.addShadow(offset: CGSize.init(width: 0, height: 2), color: UIColor.black, radius: 3.0, opacity: 0.20)
         
     }
 }

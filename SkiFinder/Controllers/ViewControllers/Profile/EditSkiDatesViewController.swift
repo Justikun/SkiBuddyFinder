@@ -176,7 +176,7 @@ extension EditSkiDatesViewController {
     
     func buttonStyles() {
         willSkiButton.titleLabel?.text = "Will Ski"
-        maybeSkiButton.titleLabel?.text = "Maybe Ski"
+        maybeSkiButton.titleLabel?.text = "Open to Ski"
         
         willSkiButton.layer.masksToBounds = true
         willSkiButton.layer.cornerRadius = CGFloat(Float(self.willSkiButton.frame.size.height/2.0))
@@ -195,26 +195,7 @@ extension EditSkiDatesViewController {
             maybeSkiButton.titleLabel?.textColor = UIColor(red: 237/255, green: 161/255, blue: 86/255, alpha: 0.2)
             maybeSkiButton.layer.borderWidth = 0
             maybeSkiButton.backgroundColor = UIColor(red: 237/255, green: 161/255, blue: 86/255, alpha: 0.2)
-            
-//            willSkiButton.titleLabel?.textColor = UIColor.white
-//            willSkiButton.layer.borderWidth = 1
-//            willSkiButton.layer.borderColor = CGColor(red: 52/255, green: 148/255, blue: 202/255, alpha: 1)
-//
-//            let startColor = CGColor(red: 108/255, green: 182/255, blue: 246/255, alpha: 1)
-//            let endColor = CGColor(red: 52/255, green: 148/255, blue: 202/255, alpha: 1)
-//            let gradientLayer = CAGradientLayer()
-//
-//            gradientLayer.colors = [startColor, endColor]
-//            gradientLayer.locations = [0, 1]
-//            gradientLayer.frame = willSkiButton.bounds
-//
-//            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-//            gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
-//
-//            willSkiButton.layer.insertSublayer(gradientLayer, at: 0)
-//
-//            print("Sublayers: \(willSkiButton.layer.sublayers?.count)")
-//
+        
         } else {
             // Will Ski Button - PASSIVE
             willSkiButton.titleLabel?.textColor = UIColor(red: 52/255, green: 148/255, blue: 202/255, alpha: 0.5)

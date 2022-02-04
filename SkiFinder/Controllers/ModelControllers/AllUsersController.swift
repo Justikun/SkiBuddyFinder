@@ -32,15 +32,36 @@ class AllUsersController {
             }
             
             if let snapshot = snapshot {
-                let users = snapshot.documents.compactMap {
+                var users = snapshot.documents.compactMap {
                     return try? $0.data(as: User.self)
                 }
                 
                 // Removes own profile out of feed.
-                self.users = self.filterSelfOut(of: users)
+                users = self.filterSelfOut(of: users)
+                
+                // Remove any people you currently are in conversation with
+                //TODO: - This function below doesn't work...
+//                users = self.filterConversatingUsersOut(of: users)
+                
+                self.users = users
                 return completion(true)
             }
         }
+    }
+    
+    // Gets all users not currently in conversation with
+    private func filterConversatingUsersOut(of users: [User]) -> [User] {
+        guard let currentUser = UserController.shared.user else { return [] }
+        
+        let uidsInConversation: [String] = currentUser.chats.map { chat in
+            return chat.otherUserUid
+        }
+        
+        let filteredUsers = users.filter {
+            uidsInConversation.contains($0.uid)
+        }
+        
+        return filteredUsers
     }
     
     private func filterSelfOut(of users: [User]) -> [User] {

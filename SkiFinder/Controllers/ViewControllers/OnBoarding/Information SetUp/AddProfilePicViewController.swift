@@ -59,7 +59,8 @@ class AddProfilePicViewController: UIViewController {
     // MARK: - Methods
     private func setUpStyles() {
         continueButton.setPillShape()
-        continueButton.setShadow()
+        continueButton.addShadow(offset: CGSize.init(width: 0, height: 2), color: UIColor.black, radius: 3.0, opacity: 0.20)
+
     }
     
     private func savePhoto(photo: UIImage, completion: @escaping(String?) -> Void) {
