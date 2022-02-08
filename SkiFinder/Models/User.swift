@@ -13,6 +13,7 @@ import MessageKit
 class User: Identifiable, Codable {
     @DocumentID var id: String?
     var uid: String
+    var mobileNumber: String
     var firstName: String
     var birthDate: Date
     var skiProficiency: String?
@@ -31,6 +32,7 @@ class User: Identifiable, Codable {
     
     enum CodingKeys: String, CodingKey {
         case uid = "uid"
+        case mobileNumber = "mobile_number"
         case firstName = "first_name"
         case birthDate = "birth_date"
         case skiProficiency = "ski_proficiency"
@@ -50,6 +52,7 @@ class User: Identifiable, Codable {
     
     
     init(uid: String,
+         mobileNumber: String,
          firstName: String,
          birthDate: Date = Date(),
          skiProficiency: String = "First Timer",
@@ -67,6 +70,7 @@ class User: Identifiable, Codable {
          chats: [Chat] = []
     ) {
         self.uid = uid
+        self.mobileNumber = mobileNumber
         self.firstName = firstName
         self.birthDate = birthDate
         self.skiProficiency = skiProficiency
@@ -80,6 +84,7 @@ class User: Identifiable, Codable {
         self.profilePhotoURL = profilePhotoURL
         self.photoURLS = photoURLS
         self.onboardingComplete = onboardingComplete
+
 
         self.chats = chats
     }

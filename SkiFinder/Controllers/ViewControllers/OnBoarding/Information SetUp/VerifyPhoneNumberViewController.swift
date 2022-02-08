@@ -48,8 +48,6 @@ class VerifyPhoneNumberViewController: UIViewController {
             // Check if account with phone number exists
             DatabaseManager.shared.checkMobile(number: mobileNumber) { [weak self] accountExists in
                 guard let self = self else { return }
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                var vc = UIViewController()
                 
                 if accountExists {
                     let mainTabBarViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController
@@ -57,16 +55,13 @@ class VerifyPhoneNumberViewController: UIViewController {
                     self.view.window?.makeKeyAndVisible()
                     
                 } else {
-                    // Add number to numbers in use
-                    let mobile = MobileInUse(number: mobileNumber)
-                    DatabaseManager.shared.addNumberToMobileNumbers(mobile: mobile) { success in
-                        guard success else { return }
-                    }
-                    vc = storyboard.instantiateViewController(identifier: "ProfileSetUpVC")
+                    // Continue to onboarding
+                    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "FirstNameVC") as? FirstNameViewController else { return }
+                    let nvc = ProfileSetUpNavigationViewController(rootViewController: vc)
+                    
+                    self.view.window?.rootViewController = nvc
+                    self.view.window?.makeKeyAndVisible()
                 }
-                
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: false, completion: nil)
             }
         }
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3601AA3527B200AA00C34ABD /* ProfileSetUpNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601AA3427B200AA00C34ABD /* ProfileSetUpNavigationViewController.swift */; };
+		3601AA3727B2119A00C34ABD /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601AA3627B2119900C34ABD /* LoadingViewController.swift */; };
 		360DBB3E278A3E5600F41CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DBB3D278A3E5600F41CBF /* AppDelegate.swift */; };
 		360DBB40278A3E5600F41CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DBB3F278A3E5600F41CBF /* SceneDelegate.swift */; };
 		360DBB45278A3E5600F41CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360DBB43278A3E5600F41CBF /* Main.storyboard */; };
@@ -91,6 +93,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3601AA3427B200AA00C34ABD /* ProfileSetUpNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetUpNavigationViewController.swift; sourceTree = "<group>"; };
+		3601AA3627B2119900C34ABD /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		360DBB3A278A3E5600F41CBF /* SkiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		360DBB3D278A3E5600F41CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		360DBB3F278A3E5600F41CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +366,7 @@
 			children = (
 				36FC23BE279FDD5B00CC7255 /* LoginSignUpNavViewController.swift */,
 				36FC23CA27A006E500CC7255 /* StartScreenViewController.swift */,
+				3601AA3627B2119900C34ABD /* LoadingViewController.swift */,
 				36FC23CC27A0B03900CC7255 /* Information SetUp */,
 				36FC23CD27A0B08600CC7255 /* Old Onboarding */,
 			);
@@ -408,6 +413,7 @@
 				36FC23D327A0C6CD00CC7255 /* SkiPassLocationViewController.swift */,
 				36FC23D527A0C6D700CC7255 /* SkiProficiencyViewController.swift */,
 				36FC23D727A0C6E400CC7255 /* AddProfilePicViewController.swift */,
+				3601AA3427B200AA00C34ABD /* ProfileSetUpNavigationViewController.swift */,
 			);
 			path = "Information SetUp";
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				36F9FFF127A1E4BF00BAF4BE /* MobileInUse.swift in Sources */,
 				36DFE1F02792662700151478 /* EditProfileTableViewController.swift in Sources */,
 				36F9FFF627A218F800BAF4BE /* ConversationsViewController.swift in Sources */,
+				3601AA3527B200AA00C34ABD /* ProfileSetUpNavigationViewController.swift in Sources */,
 				3628A99A278EADE500B4D813 /* ProfileCollectionViewCell.swift in Sources */,
 				360DBB3E278A3E5600F41CBF /* AppDelegate.swift in Sources */,
 				3616D605279A2EED00D986ED /* SkiUserSkiDatesTableViewCell.swift in Sources */,
@@ -624,6 +631,7 @@
 				36FC23B3279F941100CC7255 /* ContinueWithPhoneNumberViewController.swift in Sources */,
 				36FC23C1279FE6DE00CC7255 /* AuthManager.swift in Sources */,
 				3658754127A4B43900D053A8 /* ChatTableViewCell.swift in Sources */,
+				3601AA3727B2119A00C34ABD /* LoadingViewController.swift in Sources */,
 				36FC23B5279F9F2D00CC7255 /* ViewExtensions.swift in Sources */,
 				365EEB0E278BEEF7008E4B8B /* SignUpViewController.swift in Sources */,
 				3628A9AC278FCF0A00B4D813 /* DateExtensions.swift in Sources */,

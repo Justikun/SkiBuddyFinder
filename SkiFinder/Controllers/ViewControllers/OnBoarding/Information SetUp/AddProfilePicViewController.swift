@@ -7,6 +7,7 @@
 
 import UIKit
 import PhotosUI
+import FirebaseAuth
 
 class AddProfilePicViewController: UIViewController {
     
@@ -46,10 +47,17 @@ class AddProfilePicViewController: UIViewController {
                     if let error = error {
                         print("Error in \(#function) : \(error.localizedDescription)\n---\n\(error)")
                     } else {
-                        // Transition to Main Nav Bar
-                        let mainTabBarViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController
-                        self.view.window?.rootViewController = mainTabBarViewController
-                        self.view.window?.makeKeyAndVisible()
+                        print("CREated USER IN FIREBASE")
+                        guard let mobileNumber = Auth.auth().currentUser?.phoneNumber else { return }
+                        // Add phone number to database so we know the user has completed onboarding and number is in use
+                        DatabaseManager.shared.addNumberToMobileNumbers(mobile: MobileInUse(number: mobileNumber)) { success in
+                            if success {
+                                // Transition to Main Nav Bar
+                                let mainTabBarViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarViewController") as? MainTabBarViewController
+                                self.view.window?.rootViewController = mainTabBarViewController
+                                self.view.window?.makeKeyAndVisible()
+                            }
+                        }
                     }
                 }
             }

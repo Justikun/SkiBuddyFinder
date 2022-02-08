@@ -19,7 +19,7 @@ class DatabaseManager {
     /// Database
     private let db = Firestore.firestore()
     
-    /// Checks if phone number is in use
+    /// Checks if phone number is in use and has an account created
     func checkMobile(number: String, completion: @escaping (Bool) -> Void) {
         db.collection(Strings.mobileNumbers).whereField("number", isEqualTo: number).getDocuments { snapshot, error in
             if let error = error {
@@ -180,25 +180,6 @@ extension DatabaseManager {
         }
     }
     
-//    var messageId: String
-//    var senderUid: String
-//    var otherUserFirstName: String
-//    var content: String
-//    var date: Date
-//    var isRead: Bool
-    
-//    struct ChatMessage: MessageType {
-//        var sender: SenderType
-//        var messageId: String
-//        var sentDate: Date
-//        var kind: MessageKind
-//    }
-//
-//    struct Sender: SenderType {
-//        var photoURL: String
-//        var senderId: String
-//        var displayName: String
-//    }
     /// Sends a message with target conversation and message
     public func sendMessage(to conversation: String, message: ChatMessage, otherUserUid: String, completion: @escaping(Bool) -> Void) {
         var content = ""

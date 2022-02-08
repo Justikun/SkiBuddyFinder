@@ -73,7 +73,7 @@ class SignUpViewController: UIViewController {
                     
                 case .success(let authResult):
                     let userUID = authResult.user.uid
-                    let newUser = User(uid: userUID, firstName: firstName, birthDate: tempBirthDate)
+                    let newUser = User(uid: userUID, mobileNumber: "", firstName: firstName, birthDate: tempBirthDate)
                     UserController.shared.createUserInFirebase(user: newUser) { error in
                         if let error = error {
                             self.handleError(error)

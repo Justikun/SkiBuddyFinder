@@ -22,10 +22,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         
-        // if user IS logged in
+        // if user IS logged in and has completed onboarding
         if Auth.auth().currentUser != nil {
-            let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarViewController")
-            window?.rootViewController = mainTabBarController
+            if let mobileNumber = Auth.auth().currentUser?.phoneNumber {
+                DatabaseManager.shared.checkMobile(number: mobileNumber) {[weak self] numberExists in
+                    // If number exists this means user has finished onboarding
+                    if numberExists {
+                        let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarViewController")
+                        DispatchQueue.main.async {
+                            self?.window?.rootViewController = mainTabBarController
+                            self?.window?.makeKeyAndVisible()
+                        }
+                    } else {
+                        // User needs to complete onboarding
+                        guard let vc = storyboard.instantiateViewController(withIdentifier: "FirstNameVC") as? FirstNameViewController else { return }
+                        let nvc = ProfileSetUpNavigationViewController(rootViewController: vc)
+                        DispatchQueue.main.async {
+                            self?.window?.rootViewController = nvc
+                            self?.window?.makeKeyAndVisible()
+                        }
+                    }
+                }
+            }
         } else { // if user is NOT logged in
             let loginNavController = storyboard.instantiateViewController(identifier: "OnBoardingNavigationVC")
             window?.rootViewController = loginNavController

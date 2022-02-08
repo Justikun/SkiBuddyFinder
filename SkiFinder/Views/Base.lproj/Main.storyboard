@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aFF-16-aF4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TKy-4g-PPS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -597,6 +597,30 @@ Ski Buddy Finder will bring fun ski days, and lasting friendships!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ek-Kq-o2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3552" y="-61"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="5KE-gP-CGw">
+            <objects>
+                <viewController storyboardIdentifier="LoadingVC" id="TKy-4g-PPS" customClass="LoadingViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5jV-Ev-Iwg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="d0v-Gx-dZB">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tHb-5W-MYJ"/>
+                        <color key="backgroundColor" red="0.7676305175" green="0.87595552210000005" blue="0.9882522225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="d0v-Gx-dZB" firstAttribute="centerX" secondItem="5jV-Ev-Iwg" secondAttribute="centerX" id="Ysg-5j-a0Y"/>
+                            <constraint firstItem="d0v-Gx-dZB" firstAttribute="centerY" secondItem="5jV-Ev-Iwg" secondAttribute="centerY" id="aUg-I6-f16"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulR-gF-aXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4361" y="966"/>
         </scene>
         <!--Continue With Phone Number View Controller-->
         <scene sceneID="wqh-oX-kYb">
@@ -2328,10 +2352,10 @@ Ski Buddy Finder will bring fun ski days, and lasting friendships!</string>
             </objects>
             <point key="canvasLocation" x="1064" y="966"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile Set Up Navigation View Controller-->
         <scene sceneID="X0l-Zp-d8j">
             <objects>
-                <navigationController storyboardIdentifier="ProfileSetUpVC" automaticallyAdjustsScrollViewInsets="NO" id="FG3-19-UhZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileSetUpNVC" automaticallyAdjustsScrollViewInsets="NO" id="FG3-19-UhZ" customClass="ProfileSetUpNavigationViewController" customModule="SkiFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="1SA-mU-cBW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s6Z-oX-4Wj">

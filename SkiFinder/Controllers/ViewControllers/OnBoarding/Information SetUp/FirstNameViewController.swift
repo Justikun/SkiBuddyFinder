@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class FirstNameViewController: UIViewController {
 
@@ -33,9 +34,10 @@ class FirstNameViewController: UIViewController {
     // MARK: - Actions
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         guard let firstName = nameTextField.text,
+              let mobileNumber = Auth.auth().currentUser?.phoneNumber,
               let uid = AuthManager.shared.auth.currentUser?.uid else { return }
         
-        let user = User(uid: uid, firstName: firstName)
+        let user = User(uid: uid, mobileNumber: mobileNumber,firstName: firstName)
         
         performSegue(withIdentifier: "toBirthDateVC", sender: user)
     }
